@@ -63,17 +63,13 @@
 		508391D01C98667E003514EF /* MailByInVision */ = {
 			isa = PBXGroup;
 			children = (
+				508391F31C988146003514EF /* REST */,
+				508391F01C98812E003514EF /* Model */,
+				508391F21C98813A003514EF /* View */,
+				508391F11C988132003514EF /* Controller */,
 				508391D41C98667E003514EF /* AppDelegate.h */,
 				508391D51C98667E003514EF /* AppDelegate.m */,
-				508391DA1C98667E003514EF /* MasterViewController.h */,
-				508391DB1C98667E003514EF /* MasterViewController.m */,
-				508391DD1C98667E003514EF /* DetailViewController.h */,
-				508391DE1C98667E003514EF /* DetailViewController.m */,
-				508391E01C98667E003514EF /* Main.storyboard */,
-				508391E31C98667E003514EF /* Assets.xcassets */,
-				508391E51C98667E003514EF /* LaunchScreen.storyboard */,
-				508391E81C98667E003514EF /* Info.plist */,
-				508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */,
+				508391F41C988157003514EF /* Resources */,
 				508391D11C98667E003514EF /* Supporting Files */,
 			);
 			path = MailByInVision;
@@ -82,9 +78,69 @@
 		508391D11C98667E003514EF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				508391E81C98667E003514EF /* Info.plist */,
 				508391D21C98667E003514EF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		508391F01C98812E003514EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				508391F71C988221003514EF /* Data Model */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		508391F11C988132003514EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				508391DA1C98667E003514EF /* MasterViewController.h */,
+				508391DB1C98667E003514EF /* MasterViewController.m */,
+				508391DD1C98667E003514EF /* DetailViewController.h */,
+				508391DE1C98667E003514EF /* DetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		508391F21C98813A003514EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		508391F31C988146003514EF /* REST */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
+		508391F41C988157003514EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				508391F61C98820F003514EF /* Storyboards */,
+				508391E31C98667E003514EF /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		508391F61C98820F003514EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				508391E01C98667E003514EF /* Main.storyboard */,
+				508391E51C98667E003514EF /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		508391F71C988221003514EF /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */,
+			);
+			name = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MailByInVision/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michalkalis.MailByInVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MailByInVision/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michalkalis.MailByInVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,6 +368,7 @@
 				508391ED1C98667E003514EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
