@@ -10,12 +10,16 @@
 		508391D31C98667E003514EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D21C98667E003514EF /* main.m */; };
 		508391D61C98667E003514EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D51C98667E003514EF /* AppDelegate.m */; };
 		508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */; };
-		508391DC1C98667E003514EF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391DB1C98667E003514EF /* MasterViewController.m */; };
-		508391DF1C98667E003514EF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391DE1C98667E003514EF /* DetailViewController.m */; };
-		508391E21C98667E003514EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508391E01C98667E003514EF /* Main.storyboard */; };
+		508391E21C98667E003514EF /* Inbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508391E01C98667E003514EF /* Inbox.storyboard */; };
 		508391E41C98667E003514EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508391E31C98667E003514EF /* Assets.xcassets */; };
 		508391E71C98667E003514EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508391E51C98667E003514EF /* LaunchScreen.storyboard */; };
 		508391FB1C988E10003514EF /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391FA1C988E10003514EF /* CoreDataStack.m */; };
+		508391FE1C998C47003514EF /* MainContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391FD1C998C47003514EF /* MainContainerViewController.m */; };
+		508392011C998D80003514EF /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508392001C998D80003514EF /* InboxViewController.m */; };
+		508392041C998D8D003514EF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508392031C998D8D003514EF /* MenuViewController.m */; };
+		508392061C998F02003514EF /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508392051C998F02003514EF /* Menu.storyboard */; };
+		5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083920B1C999FD3003514EF /* ContentNavigationController.m */; };
+		5083920E1C99A214003514EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5083920D1C99A214003514EF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,16 +28,22 @@
 		508391D41C98667E003514EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		508391D51C98667E003514EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		508391D81C98667E003514EF /* MailByInVision.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MailByInVision.xcdatamodel; sourceTree = "<group>"; };
-		508391DA1C98667E003514EF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		508391DB1C98667E003514EF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		508391DD1C98667E003514EF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		508391DE1C98667E003514EF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		508391E11C98667E003514EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		508391E11C98667E003514EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Inbox.storyboard; sourceTree = "<group>"; };
 		508391E31C98667E003514EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		508391E61C98667E003514EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		508391E81C98667E003514EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508391F91C988E10003514EF /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		508391FA1C988E10003514EF /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		508391FC1C998C47003514EF /* MainContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContainerViewController.h; sourceTree = "<group>"; };
+		508391FD1C998C47003514EF /* MainContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContainerViewController.m; sourceTree = "<group>"; };
+		508391FF1C998D80003514EF /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		508392001C998D80003514EF /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
+		508392021C998D8D003514EF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		508392031C998D8D003514EF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		508392051C998F02003514EF /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		5083920A1C999FD3003514EF /* ContentNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentNavigationController.h; sourceTree = "<group>"; };
+		5083920B1C999FD3003514EF /* ContentNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentNavigationController.m; sourceTree = "<group>"; };
+		5083920D1C99A214003514EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,14 @@
 		508391F11C988132003514EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				508391DA1C98667E003514EF /* MasterViewController.h */,
-				508391DB1C98667E003514EF /* MasterViewController.m */,
-				508391DD1C98667E003514EF /* DetailViewController.h */,
-				508391DE1C98667E003514EF /* DetailViewController.m */,
+				508391FC1C998C47003514EF /* MainContainerViewController.h */,
+				508391FD1C998C47003514EF /* MainContainerViewController.m */,
+				508391FF1C998D80003514EF /* InboxViewController.h */,
+				508392001C998D80003514EF /* InboxViewController.m */,
+				508392021C998D8D003514EF /* MenuViewController.h */,
+				508392031C998D8D003514EF /* MenuViewController.m */,
+				5083920A1C999FD3003514EF /* ContentNavigationController.h */,
+				5083920B1C999FD3003514EF /* ContentNavigationController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -133,8 +147,10 @@
 		508391F61C98820F003514EF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				508391E01C98667E003514EF /* Main.storyboard */,
+				508391E01C98667E003514EF /* Inbox.storyboard */,
 				508391E51C98667E003514EF /* LaunchScreen.storyboard */,
+				508392051C998F02003514EF /* Menu.storyboard */,
+				5083920D1C99A214003514EF /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -214,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				508391E71C98667E003514EF /* LaunchScreen.storyboard in Resources */,
+				5083920E1C99A214003514EF /* Main.storyboard in Resources */,
 				508391E41C98667E003514EF /* Assets.xcassets in Resources */,
-				508391E21C98667E003514EF /* Main.storyboard in Resources */,
+				508391E21C98667E003514EF /* Inbox.storyboard in Resources */,
+				508392061C998F02003514EF /* Menu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,24 +244,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508391DF1C98667E003514EF /* DetailViewController.m in Sources */,
-				508391DC1C98667E003514EF /* MasterViewController.m in Sources */,
+				508391FE1C998C47003514EF /* MainContainerViewController.m in Sources */,
 				508391D61C98667E003514EF /* AppDelegate.m in Sources */,
 				508391D31C98667E003514EF /* main.m in Sources */,
 				508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */,
+				508392041C998D8D003514EF /* MenuViewController.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
+				508392011C998D80003514EF /* InboxViewController.m in Sources */,
+				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		508391E01C98667E003514EF /* Main.storyboard */ = {
+		508391E01C98667E003514EF /* Inbox.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				508391E11C98667E003514EF /* Base */,
 			);
-			name = Main.storyboard;
+			name = Inbox.storyboard;
 			sourceTree = "<group>";
 		};
 		508391E51C98667E003514EF /* LaunchScreen.storyboard */ = {
