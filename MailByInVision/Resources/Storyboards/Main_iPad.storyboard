@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5oG-bd-LPO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2Do-UP-yia">
+            <objects>
+                <navigationController id="WaC-kv-7tc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Oj8-OH-YEa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wQ7-xF-Of1" kind="relationship" relationship="rootViewController" id="1ZD-fk-iNr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snC-YP-zA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-1599"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="jfb-GC-pAO">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="wQ7-xF-Of1" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u3Z-1J-n5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="nOG-P7-UAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EUA-E8-VHB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.74360462900000002" blue="0.4171657453" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rQh-Vr-AUe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hR9-rn-n9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="-1599"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="69A-m5-ZM1">
+            <objects>
+                <splitViewController id="5oG-bd-LPO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="WaC-kv-7tc" kind="relationship" relationship="masterViewController" id="5UV-2k-EYl"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOE-0d-YAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="-1130"/>
+        </scene>
+    </scenes>
+</document>

@@ -9,8 +9,12 @@
 #import "AppDelegate.h"
 #import "MainContainerViewController.h"
 #import "CoreDataStack.h"
+#import "CustomSplitController.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
+
+@property (nonatomic, strong) UIViewController *contentController;
+@property (nonatomic, strong) CustomSplitController *splitController;
 
 @property (strong, readwrite) CoreDataStack *coreDataStack;
 - (void)completeUserInterface;
@@ -21,6 +25,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    if (IS_IPAD) {
+        self.contentController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateInitialViewController];
+        UISplitViewController *splitViewController = (UISplitViewController *)self.contentController;
+        
+        self.splitController = [[CustomSplitController alloc] init];
+        self.splitController.splitViewController = splitViewController;
+        self.splitController.detailViewController = [[UIStoryboard storyboardWithName:@"Inbox" bundle:nil] instantiateInitialViewController];
+        splitViewController.delegate = self.splitController;
+        
+        window.rootViewController = self.contentController;
+    }
+    else {
+        window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    }
+    
+    [window makeKeyAndVisible];
+    self.window = window;
+    
     [self addBlackStatusBarView];
     
     // Initialize Core Data stack

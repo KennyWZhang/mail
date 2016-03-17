@@ -1,0 +1,16 @@
+//
+//  MailByInVision-Prefix.pch
+//  MailByInVision
+//
+//  Created by Michal Kalis on 17/03/16.
+//  Copyright © 2016 Michal Kalis. All rights reserved.
+//
+
+#ifndef MailByInVision_Prefix_pch
+#define MailByInVision_Prefix_pch
+
+// Device specific macros
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#endif /* MailByInVision_Prefix_pch */

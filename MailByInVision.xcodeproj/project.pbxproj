@@ -21,6 +21,8 @@
 		5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083920B1C999FD3003514EF /* ContentNavigationController.m */; };
 		5083920E1C99A214003514EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5083920D1C99A214003514EF /* Main.storyboard */; };
 		50AFC4701C9A137800434DCC /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC46F1C9A137800434DCC /* OtherViewController.m */; };
+		50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4731C9AB0A000434DCC /* CustomSplitController.m */; };
+		50AFC4761C9AB2FA00434DCC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,10 @@
 		5083920D1C99A214003514EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		50AFC46E1C9A137800434DCC /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
 		50AFC46F1C9A137800434DCC /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
+		50AFC4711C9AADCE00434DCC /* MailByInVision-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailByInVision-Prefix.pch"; sourceTree = "<group>"; };
+		50AFC4721C9AB0A000434DCC /* CustomSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSplitController.h; sourceTree = "<group>"; };
+		50AFC4731C9AB0A000434DCC /* CustomSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSplitController.m; sourceTree = "<group>"; };
+		50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			children = (
 				508391E81C98667E003514EF /* Info.plist */,
 				508391D21C98667E003514EF /* main.m */,
+				50AFC4711C9AADCE00434DCC /* MailByInVision-Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 				508392031C998D8D003514EF /* MenuViewController.m */,
 				50AFC46E1C9A137800434DCC /* OtherViewController.h */,
 				50AFC46F1C9A137800434DCC /* OtherViewController.m */,
+				50AFC4721C9AB0A000434DCC /* CustomSplitController.h */,
+				50AFC4731C9AB0A000434DCC /* CustomSplitController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 				508391E01C98667E003514EF /* Inbox.storyboard */,
 				508391E51C98667E003514EF /* LaunchScreen.storyboard */,
 				5083920D1C99A214003514EF /* Main.storyboard */,
+				50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */,
 				508392051C998F02003514EF /* Menu.storyboard */,
 			);
 			path = Storyboards;
@@ -237,6 +247,7 @@
 				508391E71C98667E003514EF /* LaunchScreen.storyboard in Resources */,
 				5083920E1C99A214003514EF /* Main.storyboard in Resources */,
 				508391E41C98667E003514EF /* Assets.xcassets in Resources */,
+				50AFC4761C9AB2FA00434DCC /* Main_iPad.storyboard in Resources */,
 				508391E21C98667E003514EF /* Inbox.storyboard in Resources */,
 				508392061C998F02003514EF /* Menu.storyboard in Resources */,
 			);
@@ -258,6 +269,7 @@
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
 				508392011C998D80003514EF /* InboxViewController.m in Sources */,
 				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
+				50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +383,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MailByInVision/Supporting Files/MailByInVision-Prefix.pch";
 				INFOPLIST_FILE = "MailByInVision/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +397,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MailByInVision/Supporting Files/MailByInVision-Prefix.pch";
 				INFOPLIST_FILE = "MailByInVision/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
