@@ -7,8 +7,15 @@
 //
 
 #import "MenuViewController.h"
+#import "MenuDataSource.h"
+#import "MenuSectionHeaderView.h"
+#import "UIColor+ApplicationSpecific.h"
+#import "UITableViewHeaderFooterView+ReuseIdentifier.h"
 
 @interface MenuViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) MenuDataSource *menuDataSource;
 
 @end
 
@@ -16,7 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupTableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +32,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Setup
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupTableView {
+    [self.tableView registerNib:[UINib nibWithNibName:@"MenuSectionHeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:[MenuSectionHeaderView automaticReuseIdentifier]];
+    
+    self.tableView.backgroundColor = [UIColor applicationMenuCellColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 0, 0, 0);
+    
+    self.menuDataSource = [[MenuDataSource alloc] initWithTableView:self.tableView];
 }
-*/
 
 @end

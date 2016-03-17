@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuSectionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H52-UE-onW">
+                    <rect key="frame" x="0.0" y="17" width="300" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAILBOXES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zg-76-m6L">
+                            <rect key="frame" x="17" y="9" width="79" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="9Zg-76-m6L" firstAttribute="centerY" secondItem="H52-UE-onW" secondAttribute="centerY" id="Ppp-sT-Ii4"/>
+                        <constraint firstAttribute="height" constant="35" id="SPe-Po-iSG"/>
+                        <constraint firstItem="9Zg-76-m6L" firstAttribute="leading" secondItem="H52-UE-onW" secondAttribute="leading" constant="17" id="u6b-U5-oPm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="H52-UE-onW" secondAttribute="trailing" id="8Wt-DI-NWm"/>
+                <constraint firstAttribute="bottom" secondItem="H52-UE-onW" secondAttribute="bottom" id="SuX-ax-ER8"/>
+                <constraint firstItem="H52-UE-onW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hOx-hc-bFU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundStripeView" destination="H52-UE-onW" id="VHp-te-8ra"/>
+                <outlet property="backgroundStripeViewHeightConstraint" destination="SPe-Po-iSG" id="kff-vN-cNZ"/>
+                <outlet property="titleLabel" destination="9Zg-76-m6L" id="Jnk-Fu-0lT"/>
+            </connections>
+            <point key="canvasLocation" x="232" y="466"/>
+        </view>
+    </objects>
+</document>

@@ -16,12 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="hva-ml-WLA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.743604628964736" blue="0.41716574525601668" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kbt-hg-PtA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableViewCell" id="qjF-ZT-ufD" customClass="MenuTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qjF-ZT-ufD" id="Evw-ii-tBB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-inbox-icon" translatesAutoresizingMaskIntoConstraints="NO" id="iBI-Gs-Ams">
+                                                    <rect key="frame" x="17" y="6" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="cj2-bw-JxK"/>
+                                                        <constraint firstAttribute="height" constant="24" id="mjE-Jy-kTk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgJ-Gm-Tdl">
+                                                    <rect key="frame" x="53" y="7" width="47" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="DgJ-Gm-Tdl" firstAttribute="top" secondItem="Evw-ii-tBB" secondAttribute="top" constant="7" id="54D-tf-bhi"/>
+                                                <constraint firstItem="iBI-Gs-Ams" firstAttribute="top" secondItem="Evw-ii-tBB" secondAttribute="top" constant="6" id="HEb-3a-Xcw"/>
+                                                <constraint firstItem="iBI-Gs-Ams" firstAttribute="leading" secondItem="Evw-ii-tBB" secondAttribute="leading" constant="17" id="Qgs-kT-EME"/>
+                                                <constraint firstItem="DgJ-Gm-Tdl" firstAttribute="leading" secondItem="iBI-Gs-Ams" secondAttribute="trailing" constant="12" id="nyE-QO-Wrc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="iBI-Gs-Ams" id="FVC-Hp-QN1"/>
+                                            <outlet property="titleLabel" destination="DgJ-Gm-Tdl" id="lIb-z4-nCC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="RtN-rZ-bpA" firstAttribute="top" secondItem="kbt-hg-PtA" secondAttribute="bottom" id="2f9-GW-rfs"/>
+                            <constraint firstItem="kbt-hg-PtA" firstAttribute="top" secondItem="hva-ml-WLA" secondAttribute="top" id="CUo-Hd-LHG"/>
+                            <constraint firstItem="kbt-hg-PtA" firstAttribute="leading" secondItem="hva-ml-WLA" secondAttribute="leading" id="MIC-eN-ecU"/>
+                            <constraint firstAttribute="trailing" secondItem="kbt-hg-PtA" secondAttribute="trailing" id="vpo-Fi-GHJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="kbt-hg-PtA" id="i4c-2O-tGa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig4-Hv-X3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="482" y="328"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-inbox-icon" width="21" height="18"/>
+    </resources>
 </document>
