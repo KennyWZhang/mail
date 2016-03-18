@@ -38,9 +38,13 @@
     if (viewController == self.viewControllers.firstObject) {
         // Poping back to the root
         if (self.presentingViewController == nil) {
-            UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(toggleMenu:)];
-            self.menuButton = menuButton;
+            // Custom bar button item
+            UIImage *image = [[UIImage imageNamed:@"menu-button-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(toggleMenu:)];
+            [menuButton setImageInsets:UIEdgeInsetsMake(0, -7, 0, 0)];
+            
             viewController.navigationItem.leftBarButtonItems = @[menuButton];
+            self.menuButton = menuButton;
         }
     }
     else {

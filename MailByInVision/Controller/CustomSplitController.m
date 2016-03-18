@@ -56,8 +56,7 @@
 
 - (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem
        forPopoverController:(UIPopoverController *)pc {
-#warning TODO add menu image
-    UIImage *image = [UIImage imageNamed:@"xxx"];
+    UIImage *image = [UIImage imageNamed:@"menu-button-icon"];
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     barButtonItem.image = image;
     self.popoverController = pc;
