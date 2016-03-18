@@ -41,17 +41,29 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntn-JY-m3Y" userLabel="separator line">
+                                                    <rect key="frame" x="0.0" y="35" width="600" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="Hqw-Xw-i4T"/>
+                                                        <constraint firstAttribute="height" constant="1" id="vuM-Wi-Blv"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ntn-JY-m3Y" secondAttribute="bottom" id="4pJ-89-eyT"/>
                                                 <constraint firstItem="DgJ-Gm-Tdl" firstAttribute="top" secondItem="Evw-ii-tBB" secondAttribute="top" constant="7" id="54D-tf-bhi"/>
                                                 <constraint firstItem="iBI-Gs-Ams" firstAttribute="top" secondItem="Evw-ii-tBB" secondAttribute="top" constant="6" id="HEb-3a-Xcw"/>
                                                 <constraint firstItem="iBI-Gs-Ams" firstAttribute="leading" secondItem="Evw-ii-tBB" secondAttribute="leading" constant="17" id="Qgs-kT-EME"/>
+                                                <constraint firstAttribute="trailing" secondItem="ntn-JY-m3Y" secondAttribute="trailing" id="cYO-vb-rwc"/>
                                                 <constraint firstItem="DgJ-Gm-Tdl" firstAttribute="leading" secondItem="iBI-Gs-Ams" secondAttribute="trailing" constant="12" id="nyE-QO-Wrc"/>
+                                                <constraint firstItem="ntn-JY-m3Y" firstAttribute="leading" secondItem="Evw-ii-tBB" secondAttribute="leading" id="uzc-Se-OWw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="iconImageView" destination="iBI-Gs-Ams" id="FVC-Hp-QN1"/>
+                                            <outlet property="separatorLine" destination="ntn-JY-m3Y" id="Tv3-b6-F9V"/>
                                             <outlet property="titleLabel" destination="DgJ-Gm-Tdl" id="lIb-z4-nCC"/>
                                         </connections>
                                     </tableViewCell>

@@ -120,6 +120,16 @@ typedef NS_ENUM(NSUInteger, TableSectionMailboxes) {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[MenuTableViewCell automaticReuseIdentifier] forIndexPath:indexPath];
     
+    // Show separator line only for second cell in *GROUPS* section
+    if (indexPath.section == MenuTableSectionGroups && indexPath.row == 1) {
+        cell.separatorLine.hidden = NO;
+    }
+    else {
+        cell.separatorLine.hidden = YES;
+    }
+    
+    cell.separatorLine.backgroundColor = [UIColor applicationMenuSectionColor];
+    
     switch (indexPath.section) {
         case MenuTableSectionMailboxes: {
             // Mailboxes section

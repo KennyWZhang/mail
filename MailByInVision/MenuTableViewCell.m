@@ -11,16 +11,15 @@
 
 @implementation MenuTableViewCell
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
+- (void)awakeFromNib {
+    [super awakeFromNib];
     
-    if (self) {
-        self.contentView.backgroundColor = [UIColor applicationMenuCellColor];
-        self.titleLabel.textColor = [UIColor applicationMenuCellTextColor];
-        self.iconImageView.tintColor = [UIColor applicationMenuCellTextColor];
-    }
+    self.contentView.backgroundColor = [UIColor applicationMenuCellColor];
+    self.titleLabel.textColor = [UIColor applicationMenuCellTextColor];
+    self.iconImageView.tintColor = [UIColor applicationMenuCellTextColor];
     
-    return self;
+    self.separatorLine.backgroundColor = [UIColor applicationMenuSectionColor];
+    self.separatorLine.hidden = YES;
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
