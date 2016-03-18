@@ -33,6 +33,7 @@
 		50AFC4AB1C9B309500434DCC /* MenuSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50AFC4AA1C9B309500434DCC /* MenuSectionHeaderView.xib */; };
 		50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B21C9B659100434DCC /* UIImage+TemplateImage.m */; };
 		50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B51C9B677500434DCC /* UIImageView+RoundedRectangle.m */; };
+		50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B81C9C0A9400434DCC /* UINavigationBar+CustomHeight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		50AFC4B21C9B659100434DCC /* UIImage+TemplateImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TemplateImage.m"; sourceTree = "<group>"; };
 		50AFC4B41C9B677500434DCC /* UIImageView+RoundedRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RoundedRectangle.h"; sourceTree = "<group>"; };
 		50AFC4B51C9B677500434DCC /* UIImageView+RoundedRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RoundedRectangle.m"; sourceTree = "<group>"; };
+		50AFC4B71C9C0A9400434DCC /* UINavigationBar+CustomHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+CustomHeight.h"; sourceTree = "<group>"; };
+		50AFC4B81C9C0A9400434DCC /* UINavigationBar+CustomHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+CustomHeight.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +221,8 @@
 			children = (
 				50AFC4781C9ABD2A00434DCC /* UIColor+ApplicationSpecific.h */,
 				50AFC4791C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m */,
+				50AFC4B71C9C0A9400434DCC /* UINavigationBar+CustomHeight.h */,
+				50AFC4B81C9C0A9400434DCC /* UINavigationBar+CustomHeight.m */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				508392041C998D8D003514EF /* MenuViewController.m in Sources */,
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
+				50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */,
 				508392011C998D80003514EF /* InboxViewController.m in Sources */,
 				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
 				50AFC4891C9AD48800434DCC /* MenuTableViewCell.m in Sources */,

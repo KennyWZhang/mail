@@ -45,6 +45,7 @@
     [window makeKeyAndVisible];
     self.window = window;
     
+    [self customizeAppearance];
     [self addBlackStatusBarView];
     
     // Initialize Core Data stack
@@ -69,7 +70,12 @@
 
 #pragma mark - Auxiliary
 
+- (void)customizeAppearance {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+}
+
 - (void)completeUserInterface {
+#warning TODO either add some UI setup or remove this code
 }
 
 - (void)addBlackStatusBarView {

@@ -7,6 +7,7 @@
 //
 
 #import "ContentNavigationController.h"
+#import "UINavigationBar+CustomHeight.h"
 
 @interface ContentNavigationController ()
 
@@ -20,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.navigationBar setHeight:50];
     
     self.delegate = self;
 }
