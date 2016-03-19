@@ -6,14 +6,15 @@
 //  Copyright © 2016 Michal Kalis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
+@import UIKit;
+@import CoreData;
+#import "WindowWithStatusBar.h"
 
 @class CoreDataStack;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) WindowWithStatusBar *window;
 @property (strong, readonly) CoreDataStack *coreDataStack;
 
 @end

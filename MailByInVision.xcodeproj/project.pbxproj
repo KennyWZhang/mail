@@ -20,7 +20,6 @@
 		508392061C998F02003514EF /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508392051C998F02003514EF /* Menu.storyboard */; };
 		5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083920B1C999FD3003514EF /* ContentNavigationController.m */; };
 		5083920E1C99A214003514EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5083920D1C99A214003514EF /* Main.storyboard */; };
-		50AFC4701C9A137800434DCC /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC46F1C9A137800434DCC /* OtherViewController.m */; };
 		50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4731C9AB0A000434DCC /* CustomSplitController.m */; };
 		50AFC4761C9AB2FA00434DCC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */; };
 		50AFC47A1C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4791C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m */; };
@@ -34,6 +33,8 @@
 		50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B21C9B659100434DCC /* UIImage+TemplateImage.m */; };
 		50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B51C9B677500434DCC /* UIImageView+RoundedRectangle.m */; };
 		50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B81C9C0A9400434DCC /* UINavigationBar+CustomHeight.m */; };
+		50AFC4BB1C9D460D00434DCC /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AFC4BA1C9D460D00434DCC /* Other.storyboard */; };
+		50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +59,6 @@
 		5083920A1C999FD3003514EF /* ContentNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentNavigationController.h; sourceTree = "<group>"; };
 		5083920B1C999FD3003514EF /* ContentNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentNavigationController.m; sourceTree = "<group>"; };
 		5083920D1C99A214003514EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		50AFC46E1C9A137800434DCC /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
-		50AFC46F1C9A137800434DCC /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
 		50AFC4711C9AADCE00434DCC /* MailByInVision-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailByInVision-Prefix.pch"; sourceTree = "<group>"; };
 		50AFC4721C9AB0A000434DCC /* CustomSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSplitController.h; sourceTree = "<group>"; };
 		50AFC4731C9AB0A000434DCC /* CustomSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSplitController.m; sourceTree = "<group>"; };
@@ -85,6 +84,9 @@
 		50AFC4B51C9B677500434DCC /* UIImageView+RoundedRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RoundedRectangle.m"; sourceTree = "<group>"; };
 		50AFC4B71C9C0A9400434DCC /* UINavigationBar+CustomHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+CustomHeight.h"; sourceTree = "<group>"; };
 		50AFC4B81C9C0A9400434DCC /* UINavigationBar+CustomHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+CustomHeight.m"; sourceTree = "<group>"; };
+		50AFC4BA1C9D460D00434DCC /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
+		50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowWithStatusBar.h; path = MailByInVision/Resources/Storyboards/WindowWithStatusBar.h; sourceTree = SOURCE_ROOT; };
+		50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowWithStatusBar.m; path = MailByInVision/Resources/Storyboards/WindowWithStatusBar.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +158,6 @@
 				50AFC4911C9AE6A400434DCC /* Container */,
 				50AFC48F1C9AE66D00434DCC /* Inbox */,
 				50AFC48E1C9AE66800434DCC /* Menu */,
-				50AFC46E1C9A137800434DCC /* OtherViewController.h */,
-				50AFC46F1C9A137800434DCC /* OtherViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +167,8 @@
 			children = (
 				50AFC49D1C9B242F00434DCC /* Header */,
 				50AFC4801C9AD41F00434DCC /* Cell */,
+				50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */,
+				50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +197,7 @@
 				5083920D1C99A214003514EF /* Main.storyboard */,
 				50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */,
 				508392051C998F02003514EF /* Menu.storyboard */,
+				50AFC4BA1C9D460D00434DCC /* Other.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				508391E71C98667E003514EF /* LaunchScreen.storyboard in Resources */,
+				50AFC4BB1C9D460D00434DCC /* Other.storyboard in Resources */,
 				5083920E1C99A214003514EF /* Main.storyboard in Resources */,
 				508391E41C98667E003514EF /* Assets.xcassets in Resources */,
 				50AFC4761C9AB2FA00434DCC /* Main_iPad.storyboard in Resources */,
@@ -376,7 +380,6 @@
 				508391D61C98667E003514EF /* AppDelegate.m in Sources */,
 				50AFC47A1C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m in Sources */,
 				508391D31C98667E003514EF /* main.m in Sources */,
-				50AFC4701C9A137800434DCC /* OtherViewController.m in Sources */,
 				508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */,
 				508392041C998D8D003514EF /* MenuViewController.m in Sources */,
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
@@ -388,6 +391,7 @@
 				50AFC4A91C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m in Sources */,
 				50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */,
 				50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */,
+				50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */,
 				50AFC48D1C9AE65A00434DCC /* MenuDataSource.m in Sources */,
 				50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */,
 			);

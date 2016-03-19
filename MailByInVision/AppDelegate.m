@@ -25,7 +25,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    WindowWithStatusBar *window = [[WindowWithStatusBar alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     if (IS_IPAD) {
         self.contentController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateInitialViewController];
@@ -45,8 +45,10 @@
     [window makeKeyAndVisible];
     self.window = window;
     
+    // After the whole view hierarchy and `rootViewController` are setup, add the global black status bar
+    [window addBlackStatusBarView];
+    
     [self customizeAppearance];
-    [self addBlackStatusBarView];
     
     // Initialize Core Data stack
     [self setCoreDataStack:[[CoreDataStack alloc] initWithCallback:^{
@@ -76,17 +78,6 @@
 
 - (void)completeUserInterface {
 #warning TODO either add some UI setup or remove this code
-}
-
-- (void)addBlackStatusBarView {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.translatesAutoresizingMaskIntoConstraints = NO;
-    view.backgroundColor = [UIColor blackColor];
-    [self.window.rootViewController.view addSubview:view];
-    
-    [self.window.rootViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]|" options:0 metrics:nil views:@{@"view": view}]];
-    [self.window.rootViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[view]" options:0 metrics:nil views:@{@"view": view}]];
-    [self.window.rootViewController.view addConstraint:[NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:20]];
 }
 
 @end
