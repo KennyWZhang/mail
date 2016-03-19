@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface MenuDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface MenuDataSource : NSObject <UITableViewDataSource>
 
 // Enums
 typedef NS_ENUM(NSUInteger, MenuTableSection) {
@@ -17,6 +17,16 @@ typedef NS_ENUM(NSUInteger, MenuTableSection) {
     MenuTableSectionMarked,
     MenuTableSectionCount
 };
+
+typedef NS_ENUM(NSUInteger, TableSectionMailboxes) {
+    TableSectionMailboxesInbox,
+    TableSectionMailboxesSent,
+    TableSectionMailboxesPinned,
+    TableSectionMailboxesDrafts,
+    TableSectionMailboxesTrash,
+    TableSectionMailboxesCount
+};
+
 
 - (instancetype)initWithTableView:(UITableView *)tableView;
 

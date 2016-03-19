@@ -5,6 +5,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="K2r-hs-whw">
+            <objects>
+                <navigationController id="0wJ-A4-4bu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CQq-ae-sx5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJe-mS-qgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="239"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="xpw-or-7Ci">
             <objects>

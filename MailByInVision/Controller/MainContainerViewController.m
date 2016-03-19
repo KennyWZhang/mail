@@ -8,6 +8,7 @@
 
 #import "MainContainerViewController.h"
 #import "MenuViewController.h"
+#import "MenuDataSource.h"
 #import "ContentNavigationController.h"
 
 @interface MainContainerViewController () <UIGestureRecognizerDelegate, MenuButtonDelegate, MenuViewControllerDelegate>
@@ -150,7 +151,7 @@ const CGFloat SlidableWidth = 30;
         }
         case UIGestureRecognizerStateEnded: {
             if (!self.shouldShowMenu) {
-                [self movePanelToOriginalPosition];
+                [self hideMenu];
             }
             else {
                 [self showMenu];
@@ -171,7 +172,7 @@ const CGFloat SlidableWidth = 30;
     CGPoint point = [(UITapGestureRecognizer *)sender locationInView:self.view];
     
     if (point.x > CGRectGetWidth(self.view.frame) - MinimalContentWidth) {
-        [self movePanelToOriginalPosition];
+        [self hideMenu];
     }
 }
 
@@ -192,7 +193,7 @@ const CGFloat SlidableWidth = 30;
                      }];
 }
 
-- (void)movePanelToOriginalPosition {
+- (void)hideMenu {
     [UIView animateWithDuration:SlideDuration delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         self.contentNavigationController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     }
@@ -208,7 +209,7 @@ const CGFloat SlidableWidth = 30;
 
 - (void)toggleMenu {
     if (self.isMenuShown) {
-        [self movePanelToOriginalPosition];
+        [self hideMenu];
     }
     else {
         [self showMenu];
@@ -217,8 +218,37 @@ const CGFloat SlidableWidth = 30;
 
 #pragma mark - Menu View Controller Delegate
 
-- (void)didSelectMenuItemWithController:(UIViewController *)controller {
-#warning todo
+- (void)didSelectMenuItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ContentNavigationController *controller = nil;
+    
+    switch (indexPath.section) {
+        case MenuTableSectionMailboxes: {
+            switch (indexPath.row) {
+                case TableSectionMailboxesInbox:
+                    controller = [UIStoryboard storyboardWithName:@"Inbox" bundle:nil].instantiateInitialViewController;
+                    break;
+                    
+                default: {
+                    // For demo purposes showing just a dummy controller
+                    controller = [UIStoryboard storyboardWithName:@"Other" bundle:nil].instantiateInitialViewController;
+                    break;
+                }
+            }
+            break;
+        }
+            
+        default: {
+            // For demo purposes showing just a dummy controller
+            controller = [UIStoryboard storyboardWithName:@"Other" bundle:nil].instantiateInitialViewController;
+            break;
+        }
+    }
+    
+    controller.view.frame = CGRectMake(self.view.frame.size.width - MinimalContentWidth, 0, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [self addContentNavigationController:controller];
+    [self hideMenu];
 }
 
 @end

@@ -10,7 +10,6 @@
 #import "MenuTableViewCell.h"
 #import "UITableViewCell+ReuseIdentifier.h"
 #import "UITableViewHeaderFooterView+ReuseIdentifier.h"
-#import "MenuSectionHeaderView.h"
 #import "UIImage+TemplateImage.h"
 #import "UIImageView+RoundedRectangle.h"
 #import "UIColor+ApplicationSpecific.h"
@@ -32,16 +31,6 @@
 const NSInteger NumberOfRowsInGroupsSection = 4;
 const NSInteger NumberOfRowsInMarkedSection = 4;
 
-// Enums
-typedef NS_ENUM(NSUInteger, TableSectionMailboxes) {
-    TableSectionMailboxesInbox,
-    TableSectionMailboxesSent,
-    TableSectionMailboxesPinned,
-    TableSectionMailboxesDrafts,
-    TableSectionMailboxesTrash,
-    TableSectionMailboxesCount
-};
-
 
 #pragma mark - Initialization
 
@@ -50,7 +39,6 @@ typedef NS_ENUM(NSUInteger, TableSectionMailboxes) {
     
     if (self) {
         tableView.dataSource = self;
-        tableView.delegate = self;
     }
     
     return self;
@@ -156,36 +144,6 @@ typedef NS_ENUM(NSUInteger, TableSectionMailboxes) {
     }
     
     return cell;
-}
-
-#pragma mark - Table View Delegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [MenuSectionHeaderView heightInSection:section];
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    MenuSectionHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:[MenuSectionHeaderView automaticReuseIdentifier]];
-    
-    switch (section) {
-        case MenuTableSectionMailboxes:
-            view.topSection = YES;
-            view.titleLabel.text = @"MAILBOXES";
-            break;
-        case MenuTableSectionGroups:
-            view.topSection = NO;
-            view.titleLabel.text = @"GROUPS";
-            break;
-        case MenuTableSectionMarked:
-            view.topSection = NO;
-            view.titleLabel.text = @"MARKED";
-            break;
-            
-        default:
-            break;
-    }
-    
-    return view;
 }
 
 @end

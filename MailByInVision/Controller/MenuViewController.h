@@ -6,11 +6,11 @@
 //  Copyright © 2016 Michal Kalis. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @protocol MenuViewControllerDelegate <NSObject>
 
-- (void)didSelectMenuItemWithController:(UIViewController *)controller;
+- (void)didSelectMenuItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
