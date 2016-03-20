@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */; };
+		504DB8341C9F119000A76D61 /* Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8221C9F119000A76D61 /* Mark.m */; };
+		504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */; };
+		504DB8361C9F119000A76D61 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8261C9F119000A76D61 /* Group.m */; };
+		504DB8371C9F119000A76D61 /* Thread+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8281C9F119000A76D61 /* Thread+CoreDataProperties.m */; };
+		504DB8381C9F119000A76D61 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB82A1C9F119000A76D61 /* Thread.m */; };
+		504DB8391C9F119000A76D61 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB82C1C9F119000A76D61 /* Contact+CoreDataProperties.m */; };
+		504DB83A1C9F119000A76D61 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB82E1C9F119000A76D61 /* Contact.m */; };
+		504DB83B1C9F119000A76D61 /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8301C9F119000A76D61 /* Message+CoreDataProperties.m */; };
+		504DB83C1C9F119000A76D61 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8321C9F119000A76D61 /* Message.m */; };
 		508391D31C98667E003514EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D21C98667E003514EF /* main.m */; };
 		508391D61C98667E003514EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D51C98667E003514EF /* AppDelegate.m */; };
 		508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */; };
@@ -38,6 +48,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		504DB81F1C9F119000A76D61 /* Mark+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mark+CoreDataProperties.h"; path = "../../Mark+CoreDataProperties.h"; sourceTree = "<group>"; };
+		504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Mark+CoreDataProperties.m"; path = "../../Mark+CoreDataProperties.m"; sourceTree = "<group>"; };
+		504DB8211C9F119000A76D61 /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mark.h; path = ../../Mark.h; sourceTree = "<group>"; };
+		504DB8221C9F119000A76D61 /* Mark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mark.m; path = ../../Mark.m; sourceTree = "<group>"; };
+		504DB8231C9F119000A76D61 /* Group+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Group+CoreDataProperties.h"; path = "../../Group+CoreDataProperties.h"; sourceTree = "<group>"; };
+		504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Group+CoreDataProperties.m"; path = "../../Group+CoreDataProperties.m"; sourceTree = "<group>"; };
+		504DB8251C9F119000A76D61 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = ../../Group.h; sourceTree = "<group>"; };
+		504DB8261C9F119000A76D61 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = ../../Group.m; sourceTree = "<group>"; };
+		504DB8271C9F119000A76D61 /* Thread+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Thread+CoreDataProperties.h"; path = "../../Thread+CoreDataProperties.h"; sourceTree = "<group>"; };
+		504DB8281C9F119000A76D61 /* Thread+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Thread+CoreDataProperties.m"; path = "../../Thread+CoreDataProperties.m"; sourceTree = "<group>"; };
+		504DB8291C9F119000A76D61 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thread.h; path = ../../Thread.h; sourceTree = "<group>"; };
+		504DB82A1C9F119000A76D61 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thread.m; path = ../../Thread.m; sourceTree = "<group>"; };
+		504DB82B1C9F119000A76D61 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "../../Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		504DB82C1C9F119000A76D61 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "../../Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		504DB82D1C9F119000A76D61 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../../Contact.h; sourceTree = "<group>"; };
+		504DB82E1C9F119000A76D61 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = ../../Contact.m; sourceTree = "<group>"; };
+		504DB82F1C9F119000A76D61 /* Message+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Message+CoreDataProperties.h"; path = "../../Message+CoreDataProperties.h"; sourceTree = "<group>"; };
+		504DB8301C9F119000A76D61 /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataProperties.m"; path = "../../Message+CoreDataProperties.m"; sourceTree = "<group>"; };
+		504DB8311C9F119000A76D61 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../../Message.h; sourceTree = "<group>"; };
+		504DB8321C9F119000A76D61 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../../Message.m; sourceTree = "<group>"; };
 		508391CE1C98667E003514EF /* MailByInVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailByInVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508391D21C98667E003514EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		508391D41C98667E003514EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				508391F71C988221003514EF /* Data Model */,
+				50AFC4E01C9EFC9900434DCC /* Entity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +330,33 @@
 			name = Header;
 			sourceTree = "<group>";
 		};
+		50AFC4E01C9EFC9900434DCC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				504DB81F1C9F119000A76D61 /* Mark+CoreDataProperties.h */,
+				504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */,
+				504DB8211C9F119000A76D61 /* Mark.h */,
+				504DB8221C9F119000A76D61 /* Mark.m */,
+				504DB8231C9F119000A76D61 /* Group+CoreDataProperties.h */,
+				504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */,
+				504DB8251C9F119000A76D61 /* Group.h */,
+				504DB8261C9F119000A76D61 /* Group.m */,
+				504DB8271C9F119000A76D61 /* Thread+CoreDataProperties.h */,
+				504DB8281C9F119000A76D61 /* Thread+CoreDataProperties.m */,
+				504DB8291C9F119000A76D61 /* Thread.h */,
+				504DB82A1C9F119000A76D61 /* Thread.m */,
+				504DB82B1C9F119000A76D61 /* Contact+CoreDataProperties.h */,
+				504DB82C1C9F119000A76D61 /* Contact+CoreDataProperties.m */,
+				504DB82D1C9F119000A76D61 /* Contact.h */,
+				504DB82E1C9F119000A76D61 /* Contact.m */,
+				504DB82F1C9F119000A76D61 /* Message+CoreDataProperties.h */,
+				504DB8301C9F119000A76D61 /* Message+CoreDataProperties.m */,
+				504DB8311C9F119000A76D61 /* Message.h */,
+				504DB8321C9F119000A76D61 /* Message.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,20 +435,30 @@
 				50AFC4A61C9B25D300434DCC /* MenuSectionHeaderView.m in Sources */,
 				508391FE1C998C47003514EF /* MainContainerViewController.m in Sources */,
 				50AFC47E1C9ABDDB00434DCC /* UIColor+Hex.m in Sources */,
+				504DB8371C9F119000A76D61 /* Thread+CoreDataProperties.m in Sources */,
+				504DB83A1C9F119000A76D61 /* Contact.m in Sources */,
 				508391D61C98667E003514EF /* AppDelegate.m in Sources */,
 				50AFC47A1C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m in Sources */,
+				504DB83C1C9F119000A76D61 /* Message.m in Sources */,
 				508391D31C98667E003514EF /* main.m in Sources */,
 				508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */,
+				504DB83B1C9F119000A76D61 /* Message+CoreDataProperties.m in Sources */,
 				508392041C998D8D003514EF /* MenuViewController.m in Sources */,
+				504DB8381C9F119000A76D61 /* Thread.m in Sources */,
+				504DB8341C9F119000A76D61 /* Mark.m in Sources */,
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
 				50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */,
+				504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */,
 				508392011C998D80003514EF /* InboxViewController.m in Sources */,
+				504DB8391C9F119000A76D61 /* Contact+CoreDataProperties.m in Sources */,
 				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
+				504DB8361C9F119000A76D61 /* Group.m in Sources */,
 				50AFC4891C9AD48800434DCC /* MenuTableViewCell.m in Sources */,
 				50AFC4A91C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m in Sources */,
 				50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */,
 				50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */,
+				504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */,
 				50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */,
 				50AFC48D1C9AE65A00434DCC /* MenuDataSource.m in Sources */,
 				50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */,
