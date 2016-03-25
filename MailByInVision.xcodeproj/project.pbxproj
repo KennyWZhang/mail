@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		500C97A21CA49E470021FDAC /* ContactParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97A11CA49E470021FDAC /* ContactParser.m */; };
 		500C97A51CA5607F0021FDAC /* SetMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97A41CA5607F0021FDAC /* SetMapper.m */; };
+		500C97A91CA5D2B10021FDAC /* FetchedResultsDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97A81CA5D2B10021FDAC /* FetchedResultsDataProvider.m */; };
+		500C97AF1CA5D9670021FDAC /* DataProviderUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97AE1CA5D9670021FDAC /* DataProviderUpdate.m */; };
+		500C97B21CA5E29E0021FDAC /* InboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97B11CA5E29E0021FDAC /* InboxDataSource.m */; };
+		500C97B81CA5ED310021FDAC /* InboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */; };
 		504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */; };
 		504DB8341C9F119000A76D61 /* Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8221C9F119000A76D61 /* Mark.m */; };
 		504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */; };
@@ -71,6 +75,17 @@
 		500C97A11CA49E470021FDAC /* ContactParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactParser.m; sourceTree = SOURCE_ROOT; };
 		500C97A31CA5607F0021FDAC /* SetMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMapper.h; sourceTree = SOURCE_ROOT; };
 		500C97A41CA5607F0021FDAC /* SetMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMapper.m; sourceTree = SOURCE_ROOT; };
+		500C97A71CA5D2B10021FDAC /* FetchedResultsDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultsDataProvider.h; sourceTree = "<group>"; };
+		500C97A81CA5D2B10021FDAC /* FetchedResultsDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsDataProvider.m; sourceTree = "<group>"; };
+		500C97AD1CA5D9670021FDAC /* DataProviderUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProviderUpdate.h; sourceTree = "<group>"; };
+		500C97AE1CA5D9670021FDAC /* DataProviderUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataProviderUpdate.m; sourceTree = "<group>"; };
+		500C97B01CA5E29E0021FDAC /* InboxDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxDataSource.h; sourceTree = "<group>"; };
+		500C97B11CA5E29E0021FDAC /* InboxDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxDataSource.m; sourceTree = "<group>"; };
+		500C97B31CA5E81F0021FDAC /* DataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceDelegate.h; sourceTree = "<group>"; };
+		500C97B41CA5EAB30021FDAC /* ConfigurableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigurableCell.h; path = MailByInVision/Controller/ConfigurableCell.h; sourceTree = SOURCE_ROOT; };
+		500C97B51CA5EC110021FDAC /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
+		500C97B61CA5ED310021FDAC /* InboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		504DB81F1C9F119000A76D61 /* Mark+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mark+CoreDataProperties.h"; path = "../../Mark+CoreDataProperties.h"; sourceTree = "<group>"; };
 		504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Mark+CoreDataProperties.m"; path = "../../Mark+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB8211C9F119000A76D61 /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mark.h; path = ../../Mark.h; sourceTree = "<group>"; };
@@ -192,6 +207,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		500C97A61CA5D2960021FDAC /* Date Source & Provider */ = {
+			isa = PBXGroup;
+			children = (
+				500C97A71CA5D2B10021FDAC /* FetchedResultsDataProvider.h */,
+				500C97A81CA5D2B10021FDAC /* FetchedResultsDataProvider.m */,
+				500C97AD1CA5D9670021FDAC /* DataProviderUpdate.h */,
+				500C97AE1CA5D9670021FDAC /* DataProviderUpdate.m */,
+				500C97B31CA5E81F0021FDAC /* DataSourceDelegate.h */,
+				500C97B51CA5EC110021FDAC /* DataProvider.h */,
+			);
+			name = "Date Source & Provider";
+			sourceTree = "<group>";
+		};
 		508391C51C98667D003514EF = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +278,7 @@
 		508391F11C988132003514EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				500C97A61CA5D2960021FDAC /* Date Source & Provider */,
 				50AFC4911C9AE6A400434DCC /* Container */,
 				50AFC48F1C9AE66D00434DCC /* Inbox */,
 				50AFC48E1C9AE66800434DCC /* Menu */,
@@ -264,6 +293,7 @@
 				50AFC4801C9AD41F00434DCC /* Cell */,
 				50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */,
 				50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */,
+				500C97B41CA5EAB30021FDAC /* ConfigurableCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,6 +454,8 @@
 			children = (
 				50AFC4871C9AD48800434DCC /* MenuTableViewCell.h */,
 				50AFC4881C9AD48800434DCC /* MenuTableViewCell.m */,
+				500C97B61CA5ED310021FDAC /* InboxTableViewCell.h */,
+				500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -444,6 +476,8 @@
 			children = (
 				508391FF1C998D80003514EF /* InboxViewController.h */,
 				508392001C998D80003514EF /* InboxViewController.m */,
+				500C97B01CA5E29E0021FDAC /* InboxDataSource.h */,
+				500C97B11CA5E29E0021FDAC /* InboxDataSource.m */,
 			);
 			name = Inbox;
 			sourceTree = "<group>";
@@ -631,6 +665,7 @@
 				50AFC4A61C9B25D300434DCC /* MenuSectionHeaderView.m in Sources */,
 				50938CF31CA345E4009F6F51 /* StringToNumberMapper.m in Sources */,
 				50938CF81CA345E4009F6F51 /* ChainMapper.m in Sources */,
+				500C97B21CA5E29E0021FDAC /* InboxDataSource.m in Sources */,
 				504DB8471CA021FA00A76D61 /* MessageService.m in Sources */,
 				508391FE1C998C47003514EF /* MainContainerViewController.m in Sources */,
 				50AFC47E1C9ABDDB00434DCC /* UIColor+Hex.m in Sources */,
@@ -651,6 +686,8 @@
 				504DB8341C9F119000A76D61 /* Mark.m in Sources */,
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
 				50938CF21CA345E4009F6F51 /* Mapper.m in Sources */,
+				500C97AF1CA5D9670021FDAC /* DataProviderUpdate.m in Sources */,
+				500C97A91CA5D2B10021FDAC /* FetchedResultsDataProvider.m in Sources */,
 				504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
 				50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */,
@@ -659,6 +696,7 @@
 				50938CF41CA345E4009F6F51 /* ManagedObjectMapper.m in Sources */,
 				508392011C998D80003514EF /* InboxViewController.m in Sources */,
 				504DB8391C9F119000A76D61 /* Contact+CoreDataProperties.m in Sources */,
+				500C97B81CA5ED310021FDAC /* InboxTableViewCell.m in Sources */,
 				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
 				504DB8361C9F119000A76D61 /* Group.m in Sources */,
 				50AFC4891C9AD48800434DCC /* MenuTableViewCell.m in Sources */,
