@@ -14,17 +14,17 @@
 @implementation Message (CoreDataProperties)
 
 @dynamic attachmentName;
-@dynamic attachmentURL;
+@dynamic attachmentURLString;
 @dynamic lastMessage;
 @dynamic mailbox;
+@dynamic remoteID;
 @dynamic read;
 @dynamic receivedAt;
 @dynamic subject;
+@dynamic body;
 @dynamic from;
 @dynamic groups;
 @dynamic marks;
-@dynamic relationship;
-@dynamic thread;
 @dynamic to;
 
 @end

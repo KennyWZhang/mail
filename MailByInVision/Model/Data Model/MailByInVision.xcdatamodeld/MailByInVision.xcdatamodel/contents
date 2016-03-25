@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="Contact" representedClassName="Contact" syncable="YES">
         <attribute name="avatarURLString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="emailAddress" attributeType="String" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteID" attributeType="String" syncable="YES"/>
         <relationship name="receivedMessages" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Message" inverseName="from" inverseEntity="Message" syncable="YES"/>
         <relationship name="sentMessages" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Message" inverseName="to" inverseEntity="Message" syncable="YES"/>
     </entity>
@@ -19,26 +20,23 @@
     </entity>
     <entity name="Message" representedClassName="Message" syncable="YES">
         <attribute name="attachmentName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="attachmentURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attachmentURLString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastMessage" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="mailbox" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mailbox" attributeType="String" syncable="YES"/>
         <attribute name="read" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="receivedAt" attributeType="String" syncable="YES"/>
+        <attribute name="receivedAt" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="remoteID" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="receivedMessages" inverseEntity="Contact" syncable="YES"/>
         <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group" inverseName="messages" inverseEntity="Group" syncable="YES"/>
         <relationship name="marks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mark" inverseName="messages" inverseEntity="Mark" syncable="YES"/>
-        <relationship name="thread" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thread" inverseName="messages" inverseEntity="Thread" syncable="YES"/>
         <relationship name="to" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Contact" inverseName="sentMessages" inverseEntity="Contact" syncable="YES"/>
     </entity>
-    <entity name="Thread" representedClassName="Thread" syncable="YES">
-        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Message" inverseName="thread" inverseEntity="Message" syncable="YES"/>
-    </entity>
     <elements>
-        <element name="Contact" positionX="-128" positionY="-54" width="128" height="133"/>
-        <element name="Group" positionX="52" positionY="72" width="128" height="73"/>
+        <element name="Contact" positionX="-128" positionY="-54" width="128" height="148"/>
+        <element name="Group" positionX="-90" positionY="107" width="128" height="73"/>
         <element name="Mark" positionX="-92" positionY="306" width="128" height="88"/>
-        <element name="Message" positionX="-387" positionY="36" width="128" height="223"/>
-        <element name="Thread" positionX="16" positionY="171" width="128" height="58"/>
+        <element name="Message" positionX="-387" positionY="36" width="128" height="240"/>
     </elements>
 </model>

@@ -35,9 +35,7 @@ const NSInteger NumberOfRowsInMarkedSection = 4;
 #pragma mark - Initialization
 
 - (instancetype)initWithTableView:(UITableView *)tableView {
-    self = [super init];
-    
-    if (self) {
+    if (self = [super init]) {
         tableView.dataSource = self;
     }
     

@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *emailAddress;
 @property (nullable, nonatomic, retain) NSString *firstname;
 @property (nullable, nonatomic, retain) NSString *lastname;
+@property (nullable, nonatomic, retain) NSString *remoteID;
 @property (nullable, nonatomic, retain) NSSet<Message *> *receivedMessages;
 @property (nullable, nonatomic, retain) NSSet<Message *> *sentMessages;
 

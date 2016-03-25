@@ -10,7 +10,6 @@
 #import "Contact.h"
 #import "Group.h"
 #import "Mark.h"
-#import "Thread.h"
 
 @implementation Message
 

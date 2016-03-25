@@ -7,6 +7,8 @@
 //
 
 #import "InboxViewController.h"
+#import "MessageService.h"
+#import "UIViewController+CoreDataStack.h"
 
 @interface InboxViewController ()
 
@@ -16,7 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [MessageService fetchAllMessagesWithCoreDataStack:self.coreDataStack requestResult:^(NSArray *messages, NSError *error) {
+        NSLog(@"messages %@", messages);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

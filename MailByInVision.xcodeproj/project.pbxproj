@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500C97A21CA49E470021FDAC /* ContactParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97A11CA49E470021FDAC /* ContactParser.m */; };
+		500C97A51CA5607F0021FDAC /* SetMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97A41CA5607F0021FDAC /* SetMapper.m */; };
 		504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */; };
 		504DB8341C9F119000A76D61 /* Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8221C9F119000A76D61 /* Mark.m */; };
 		504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */; };
 		504DB8361C9F119000A76D61 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8261C9F119000A76D61 /* Group.m */; };
-		504DB8371C9F119000A76D61 /* Thread+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8281C9F119000A76D61 /* Thread+CoreDataProperties.m */; };
-		504DB8381C9F119000A76D61 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB82A1C9F119000A76D61 /* Thread.m */; };
 		504DB8391C9F119000A76D61 /* Contact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB82C1C9F119000A76D61 /* Contact+CoreDataProperties.m */; };
 		504DB83A1C9F119000A76D61 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB82E1C9F119000A76D61 /* Contact.m */; };
 		504DB83B1C9F119000A76D61 /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8301C9F119000A76D61 /* Message+CoreDataProperties.m */; };
 		504DB83C1C9F119000A76D61 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8321C9F119000A76D61 /* Message.m */; };
+		504DB8421C9FF70B00A76D61 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8411C9FF70B00A76D61 /* APIClient.m */; };
+		504DB8471CA021FA00A76D61 /* MessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8461CA021FA00A76D61 /* MessageService.m */; };
+		504DB84A1CA05B4400A76D61 /* InVisionJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8491CA05B4400A76D61 /* InVisionJSONResponseSerializer.m */; };
+		504DB84D1CA06C0E00A76D61 /* NSDictionary+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB84C1CA06C0E00A76D61 /* NSDictionary+Parsing.m */; };
+		504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */; };
+		504DB8541CA088B400A76D61 /* UIViewController+CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */; };
 		508391D31C98667E003514EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D21C98667E003514EF /* main.m */; };
 		508391D61C98667E003514EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D51C98667E003514EF /* AppDelegate.m */; };
 		508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */; };
@@ -30,6 +36,16 @@
 		508392061C998F02003514EF /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508392051C998F02003514EF /* Menu.storyboard */; };
 		5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5083920B1C999FD3003514EF /* ContentNavigationController.m */; };
 		5083920E1C99A214003514EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5083920D1C99A214003514EF /* Main.storyboard */; };
+		50938CF21CA345E4009F6F51 /* Mapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CE11CA345E4009F6F51 /* Mapper.m */; };
+		50938CF31CA345E4009F6F51 /* StringToNumberMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CE31CA345E4009F6F51 /* StringToNumberMapper.m */; };
+		50938CF41CA345E4009F6F51 /* ManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CE51CA345E4009F6F51 /* ManagedObjectMapper.m */; };
+		50938CF51CA345E4009F6F51 /* ArrayMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CE71CA345E4009F6F51 /* ArrayMapper.m */; };
+		50938CF61CA345E4009F6F51 /* ErrorIfMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CE91CA345E4009F6F51 /* ErrorIfMapper.m */; };
+		50938CF81CA345E4009F6F51 /* ChainMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CED1CA345E4009F6F51 /* ChainMapper.m */; };
+		50938CF91CA345E4009F6F51 /* OptionalMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CEF1CA345E4009F6F51 /* OptionalMapper.m */; };
+		50938CFF1CA35526009F6F51 /* MessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938CFE1CA35526009F6F51 /* MessageParser.m */; };
+		50938D071CA3D65E009F6F51 /* NSString+Emptiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938D061CA3D65D009F6F51 /* NSString+Emptiness.m */; };
+		50938D0A1CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 50938D091CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m */; };
 		50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4731C9AB0A000434DCC /* CustomSplitController.m */; };
 		50AFC4761C9AB2FA00434DCC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */; };
 		50AFC47A1C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4791C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m */; };
@@ -45,9 +61,16 @@
 		50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4B81C9C0A9400434DCC /* UINavigationBar+CustomHeight.m */; };
 		50AFC4BB1C9D460D00434DCC /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AFC4BA1C9D460D00434DCC /* Other.storyboard */; };
 		50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */; };
+		7353DBD66004D2AEAFD3CEC3 /* libPods-MailByInVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B7F2F150C1E1D7BBA0697 /* libPods-MailByInVision.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		363B50377672AABB4FCC4A75 /* Pods-MailByInVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailByInVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MailByInVision/Pods-MailByInVision.debug.xcconfig"; sourceTree = "<group>"; };
+		3CDCB3B9D0FABEAA90C07C31 /* Pods-MailByInVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailByInVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailByInVision/Pods-MailByInVision.release.xcconfig"; sourceTree = "<group>"; };
+		500C97A01CA49E470021FDAC /* ContactParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactParser.h; sourceTree = SOURCE_ROOT; };
+		500C97A11CA49E470021FDAC /* ContactParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactParser.m; sourceTree = SOURCE_ROOT; };
+		500C97A31CA5607F0021FDAC /* SetMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMapper.h; sourceTree = SOURCE_ROOT; };
+		500C97A41CA5607F0021FDAC /* SetMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMapper.m; sourceTree = SOURCE_ROOT; };
 		504DB81F1C9F119000A76D61 /* Mark+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mark+CoreDataProperties.h"; path = "../../Mark+CoreDataProperties.h"; sourceTree = "<group>"; };
 		504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Mark+CoreDataProperties.m"; path = "../../Mark+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB8211C9F119000A76D61 /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mark.h; path = ../../Mark.h; sourceTree = "<group>"; };
@@ -56,10 +79,6 @@
 		504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Group+CoreDataProperties.m"; path = "../../Group+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB8251C9F119000A76D61 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = ../../Group.h; sourceTree = "<group>"; };
 		504DB8261C9F119000A76D61 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Group.m; path = ../../Group.m; sourceTree = "<group>"; };
-		504DB8271C9F119000A76D61 /* Thread+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Thread+CoreDataProperties.h"; path = "../../Thread+CoreDataProperties.h"; sourceTree = "<group>"; };
-		504DB8281C9F119000A76D61 /* Thread+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Thread+CoreDataProperties.m"; path = "../../Thread+CoreDataProperties.m"; sourceTree = "<group>"; };
-		504DB8291C9F119000A76D61 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thread.h; path = ../../Thread.h; sourceTree = "<group>"; };
-		504DB82A1C9F119000A76D61 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thread.m; path = ../../Thread.m; sourceTree = "<group>"; };
 		504DB82B1C9F119000A76D61 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Contact+CoreDataProperties.h"; path = "../../Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
 		504DB82C1C9F119000A76D61 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Contact+CoreDataProperties.m"; path = "../../Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB82D1C9F119000A76D61 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../../Contact.h; sourceTree = "<group>"; };
@@ -68,6 +87,18 @@
 		504DB8301C9F119000A76D61 /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataProperties.m"; path = "../../Message+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB8311C9F119000A76D61 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../../Message.h; sourceTree = "<group>"; };
 		504DB8321C9F119000A76D61 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../../Message.m; sourceTree = "<group>"; };
+		504DB8401C9FF70B00A76D61 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = SOURCE_ROOT; };
+		504DB8411C9FF70B00A76D61 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = SOURCE_ROOT; };
+		504DB8451CA021FA00A76D61 /* MessageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageService.h; sourceTree = SOURCE_ROOT; };
+		504DB8461CA021FA00A76D61 /* MessageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageService.m; sourceTree = SOURCE_ROOT; };
+		504DB8481CA05B4400A76D61 /* InVisionJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InVisionJSONResponseSerializer.h; sourceTree = SOURCE_ROOT; };
+		504DB8491CA05B4400A76D61 /* InVisionJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InVisionJSONResponseSerializer.m; sourceTree = SOURCE_ROOT; };
+		504DB84B1CA06C0E00A76D61 /* NSDictionary+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Parsing.h"; sourceTree = "<group>"; };
+		504DB84C1CA06C0E00A76D61 /* NSDictionary+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parsing.m"; sourceTree = "<group>"; };
+		504DB84E1CA0812A00A76D61 /* NSManagedObject+CustomInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CustomInit.h"; sourceTree = "<group>"; };
+		504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CustomInit.m"; sourceTree = "<group>"; };
+		504DB8521CA088B400A76D61 /* UIViewController+CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CoreDataStack.h"; path = "Controller/UIViewController+CoreDataStack.h"; sourceTree = "<group>"; };
+		504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CoreDataStack.m"; path = "Controller/UIViewController+CoreDataStack.m"; sourceTree = "<group>"; };
 		508391CE1C98667E003514EF /* MailByInVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailByInVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508391D21C98667E003514EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		508391D41C98667E003514EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +120,26 @@
 		5083920A1C999FD3003514EF /* ContentNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentNavigationController.h; sourceTree = "<group>"; };
 		5083920B1C999FD3003514EF /* ContentNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentNavigationController.m; sourceTree = "<group>"; };
 		5083920D1C99A214003514EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		50938CE01CA345E4009F6F51 /* Mapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mapper.h; sourceTree = SOURCE_ROOT; };
+		50938CE11CA345E4009F6F51 /* Mapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mapper.m; sourceTree = SOURCE_ROOT; };
+		50938CE21CA345E4009F6F51 /* StringToNumberMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringToNumberMapper.h; sourceTree = SOURCE_ROOT; };
+		50938CE31CA345E4009F6F51 /* StringToNumberMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringToNumberMapper.m; sourceTree = SOURCE_ROOT; };
+		50938CE41CA345E4009F6F51 /* ManagedObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedObjectMapper.h; sourceTree = SOURCE_ROOT; };
+		50938CE51CA345E4009F6F51 /* ManagedObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectMapper.m; sourceTree = SOURCE_ROOT; };
+		50938CE61CA345E4009F6F51 /* ArrayMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayMapper.h; sourceTree = SOURCE_ROOT; };
+		50938CE71CA345E4009F6F51 /* ArrayMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayMapper.m; sourceTree = SOURCE_ROOT; };
+		50938CE81CA345E4009F6F51 /* ErrorIfMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorIfMapper.h; sourceTree = SOURCE_ROOT; };
+		50938CE91CA345E4009F6F51 /* ErrorIfMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorIfMapper.m; sourceTree = SOURCE_ROOT; };
+		50938CEC1CA345E4009F6F51 /* ChainMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainMapper.h; sourceTree = SOURCE_ROOT; };
+		50938CED1CA345E4009F6F51 /* ChainMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainMapper.m; sourceTree = SOURCE_ROOT; };
+		50938CEE1CA345E4009F6F51 /* OptionalMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionalMapper.h; sourceTree = SOURCE_ROOT; };
+		50938CEF1CA345E4009F6F51 /* OptionalMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionalMapper.m; sourceTree = SOURCE_ROOT; };
+		50938CFD1CA35526009F6F51 /* MessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageParser.h; sourceTree = SOURCE_ROOT; };
+		50938CFE1CA35526009F6F51 /* MessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageParser.m; sourceTree = SOURCE_ROOT; };
+		50938D051CA3D65D009F6F51 /* NSString+Emptiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emptiness.h"; sourceTree = "<group>"; };
+		50938D061CA3D65D009F6F51 /* NSString+Emptiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emptiness.m"; sourceTree = "<group>"; };
+		50938D081CA3EA10009F6F51 /* NSManagedObject+SafeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+SafeMapping.h"; sourceTree = "<group>"; };
+		50938D091CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+SafeMapping.m"; sourceTree = "<group>"; };
 		50AFC4711C9AADCE00434DCC /* MailByInVision-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailByInVision-Prefix.pch"; sourceTree = "<group>"; };
 		50AFC4721C9AB0A000434DCC /* CustomSplitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSplitController.h; sourceTree = "<group>"; };
 		50AFC4731C9AB0A000434DCC /* CustomSplitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSplitController.m; sourceTree = "<group>"; };
@@ -117,6 +168,7 @@
 		50AFC4BA1C9D460D00434DCC /* Other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
 		50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowWithStatusBar.h; path = MailByInVision/Resources/Storyboards/WindowWithStatusBar.h; sourceTree = SOURCE_ROOT; };
 		50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WindowWithStatusBar.m; path = MailByInVision/Resources/Storyboards/WindowWithStatusBar.m; sourceTree = SOURCE_ROOT; };
+		FA9B7F2F150C1E1D7BBA0697 /* libPods-MailByInVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MailByInVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,17 +176,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7353DBD66004D2AEAFD3CEC3 /* libPods-MailByInVision.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3B1DB5D136F948515F9D9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				363B50377672AABB4FCC4A75 /* Pods-MailByInVision.debug.xcconfig */,
+				3CDCB3B9D0FABEAA90C07C31 /* Pods-MailByInVision.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		508391C51C98667D003514EF = {
 			isa = PBXGroup;
 			children = (
 				508391D01C98667E003514EF /* MailByInVision */,
 				508391CF1C98667E003514EF /* Products */,
+				3D3B1DB5D136F948515F9D9C /* Pods */,
+				A9BB965F1C7C32D7C18BD6BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,7 +216,7 @@
 				50AFC47B1C9ABDC800434DCC /* Categories */,
 				50AFC4771C9ABCFE00434DCC /* Appearance */,
 				508391F81C988DF5003514EF /* Core Data */,
-				508391F31C988146003514EF /* REST */,
+				508391F31C988146003514EF /* Network Service */,
 				508391F01C98812E003514EF /* Model */,
 				508391F21C98813A003514EF /* View */,
 				508391F11C988132003514EF /* Controller */,
@@ -204,10 +268,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		508391F31C988146003514EF /* REST */ = {
+		508391F31C988146003514EF /* Network Service */ = {
 			isa = PBXGroup;
 			children = (
+				50938D001CA35563009F6F51 /* API */,
+				50938CDF1CA331E3009F6F51 /* Parser */,
 			);
+			name = "Network Service";
 			path = REST;
 			sourceTree = "<group>";
 		};
@@ -250,6 +317,70 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
+		50938CDF1CA331E3009F6F51 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				50938CFC1CA35508009F6F51 /* Domain Specific */,
+				50938CFB1CA354E2009F6F51 /* Generic */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		50938CFB1CA354E2009F6F51 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				50938CE01CA345E4009F6F51 /* Mapper.h */,
+				50938CE11CA345E4009F6F51 /* Mapper.m */,
+				50938CE21CA345E4009F6F51 /* StringToNumberMapper.h */,
+				50938CE31CA345E4009F6F51 /* StringToNumberMapper.m */,
+				50938CE41CA345E4009F6F51 /* ManagedObjectMapper.h */,
+				50938CE51CA345E4009F6F51 /* ManagedObjectMapper.m */,
+				50938CE61CA345E4009F6F51 /* ArrayMapper.h */,
+				50938CE71CA345E4009F6F51 /* ArrayMapper.m */,
+				50938CE81CA345E4009F6F51 /* ErrorIfMapper.h */,
+				50938CE91CA345E4009F6F51 /* ErrorIfMapper.m */,
+				50938CEC1CA345E4009F6F51 /* ChainMapper.h */,
+				50938CED1CA345E4009F6F51 /* ChainMapper.m */,
+				50938CEE1CA345E4009F6F51 /* OptionalMapper.h */,
+				50938CEF1CA345E4009F6F51 /* OptionalMapper.m */,
+				500C97A31CA5607F0021FDAC /* SetMapper.h */,
+				500C97A41CA5607F0021FDAC /* SetMapper.m */,
+			);
+			name = Generic;
+			sourceTree = "<group>";
+		};
+		50938CFC1CA35508009F6F51 /* Domain Specific */ = {
+			isa = PBXGroup;
+			children = (
+				50938CFD1CA35526009F6F51 /* MessageParser.h */,
+				50938CFE1CA35526009F6F51 /* MessageParser.m */,
+				500C97A01CA49E470021FDAC /* ContactParser.h */,
+				500C97A11CA49E470021FDAC /* ContactParser.m */,
+			);
+			name = "Domain Specific";
+			sourceTree = "<group>";
+		};
+		50938D001CA35563009F6F51 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				50938D021CA3558C009F6F51 /* Domain Specific */,
+				504DB8401C9FF70B00A76D61 /* APIClient.h */,
+				504DB8411C9FF70B00A76D61 /* APIClient.m */,
+				504DB8481CA05B4400A76D61 /* InVisionJSONResponseSerializer.h */,
+				504DB8491CA05B4400A76D61 /* InVisionJSONResponseSerializer.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		50938D021CA3558C009F6F51 /* Domain Specific */ = {
+			isa = PBXGroup;
+			children = (
+				504DB8451CA021FA00A76D61 /* MessageService.h */,
+				504DB8461CA021FA00A76D61 /* MessageService.m */,
+			);
+			name = "Domain Specific";
+			sourceTree = "<group>";
+		};
 		50AFC4771C9ABCFE00434DCC /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +405,16 @@
 				50AFC4B21C9B659100434DCC /* UIImage+TemplateImage.m */,
 				50AFC4B41C9B677500434DCC /* UIImageView+RoundedRectangle.h */,
 				50AFC4B51C9B677500434DCC /* UIImageView+RoundedRectangle.m */,
+				504DB84B1CA06C0E00A76D61 /* NSDictionary+Parsing.h */,
+				504DB84C1CA06C0E00A76D61 /* NSDictionary+Parsing.m */,
+				504DB84E1CA0812A00A76D61 /* NSManagedObject+CustomInit.h */,
+				504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */,
+				50938D051CA3D65D009F6F51 /* NSString+Emptiness.h */,
+				50938D061CA3D65D009F6F51 /* NSString+Emptiness.m */,
+				504DB8521CA088B400A76D61 /* UIViewController+CoreDataStack.h */,
+				504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */,
+				50938D081CA3EA10009F6F51 /* NSManagedObject+SafeMapping.h */,
+				50938D091CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -341,10 +482,6 @@
 				504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */,
 				504DB8251C9F119000A76D61 /* Group.h */,
 				504DB8261C9F119000A76D61 /* Group.m */,
-				504DB8271C9F119000A76D61 /* Thread+CoreDataProperties.h */,
-				504DB8281C9F119000A76D61 /* Thread+CoreDataProperties.m */,
-				504DB8291C9F119000A76D61 /* Thread.h */,
-				504DB82A1C9F119000A76D61 /* Thread.m */,
 				504DB82B1C9F119000A76D61 /* Contact+CoreDataProperties.h */,
 				504DB82C1C9F119000A76D61 /* Contact+CoreDataProperties.m */,
 				504DB82D1C9F119000A76D61 /* Contact.h */,
@@ -357,6 +494,14 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		A9BB965F1C7C32D7C18BD6BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B7F2F150C1E1D7BBA0697 /* libPods-MailByInVision.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,9 +509,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 508391EB1C98667E003514EF /* Build configuration list for PBXNativeTarget "MailByInVision" */;
 			buildPhases = (
+				556FA61723F0AB627CD58E21 /* Check Pods Manifest.lock */,
 				508391CA1C98667E003514EF /* Sources */,
 				508391CB1C98667E003514EF /* Frameworks */,
 				508391CC1C98667E003514EF /* Resources */,
+				EC4C61449501BA02D88101F9 /* Embed Pods Frameworks */,
+				4D84DC16373A38B03CFB2021 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -427,41 +575,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D84DC16373A38B03CFB2021 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MailByInVision/Pods-MailByInVision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		556FA61723F0AB627CD58E21 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC4C61449501BA02D88101F9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MailByInVision/Pods-MailByInVision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		508391CA1C98667E003514EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				50AFC4A61C9B25D300434DCC /* MenuSectionHeaderView.m in Sources */,
+				50938CF31CA345E4009F6F51 /* StringToNumberMapper.m in Sources */,
+				50938CF81CA345E4009F6F51 /* ChainMapper.m in Sources */,
+				504DB8471CA021FA00A76D61 /* MessageService.m in Sources */,
 				508391FE1C998C47003514EF /* MainContainerViewController.m in Sources */,
 				50AFC47E1C9ABDDB00434DCC /* UIColor+Hex.m in Sources */,
-				504DB8371C9F119000A76D61 /* Thread+CoreDataProperties.m in Sources */,
 				504DB83A1C9F119000A76D61 /* Contact.m in Sources */,
+				500C97A51CA5607F0021FDAC /* SetMapper.m in Sources */,
 				508391D61C98667E003514EF /* AppDelegate.m in Sources */,
 				50AFC47A1C9ABD2A00434DCC /* UIColor+ApplicationSpecific.m in Sources */,
+				50938CF51CA345E4009F6F51 /* ArrayMapper.m in Sources */,
+				50938CF91CA345E4009F6F51 /* OptionalMapper.m in Sources */,
+				50938D071CA3D65E009F6F51 /* NSString+Emptiness.m in Sources */,
 				504DB83C1C9F119000A76D61 /* Message.m in Sources */,
 				508391D31C98667E003514EF /* main.m in Sources */,
 				508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */,
 				504DB83B1C9F119000A76D61 /* Message+CoreDataProperties.m in Sources */,
 				508392041C998D8D003514EF /* MenuViewController.m in Sources */,
-				504DB8381C9F119000A76D61 /* Thread.m in Sources */,
+				50938D0A1CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m in Sources */,
+				50938CFF1CA35526009F6F51 /* MessageParser.m in Sources */,
 				504DB8341C9F119000A76D61 /* Mark.m in Sources */,
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
+				50938CF21CA345E4009F6F51 /* Mapper.m in Sources */,
+				504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
 				50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */,
+				504DB84A1CA05B4400A76D61 /* InVisionJSONResponseSerializer.m in Sources */,
 				504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */,
+				50938CF41CA345E4009F6F51 /* ManagedObjectMapper.m in Sources */,
 				508392011C998D80003514EF /* InboxViewController.m in Sources */,
 				504DB8391C9F119000A76D61 /* Contact+CoreDataProperties.m in Sources */,
 				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
 				504DB8361C9F119000A76D61 /* Group.m in Sources */,
 				50AFC4891C9AD48800434DCC /* MenuTableViewCell.m in Sources */,
+				504DB8541CA088B400A76D61 /* UIViewController+CoreDataStack.m in Sources */,
 				50AFC4A91C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m in Sources */,
 				50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */,
+				504DB84D1CA06C0E00A76D61 /* NSDictionary+Parsing.m in Sources */,
 				50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */,
 				504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */,
 				50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */,
 				50AFC48D1C9AE65A00434DCC /* MenuDataSource.m in Sources */,
+				500C97A21CA49E470021FDAC /* ContactParser.m in Sources */,
 				50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */,
+				504DB8421C9FF70B00A76D61 /* APIClient.m in Sources */,
+				50938CF61CA345E4009F6F51 /* ErrorIfMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +785,7 @@
 		};
 		508391EC1C98667E003514EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 363B50377672AABB4FCC4A75 /* Pods-MailByInVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -587,6 +800,7 @@
 		};
 		508391ED1C98667E003514EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CDCB3B9D0FABEAA90C07C31 /* Pods-MailByInVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

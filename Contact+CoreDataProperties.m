@@ -17,6 +17,7 @@
 @dynamic emailAddress;
 @dynamic firstname;
 @dynamic lastname;
+@dynamic remoteID;
 @dynamic receivedMessages;
 @dynamic sentMessages;
 

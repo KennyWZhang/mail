@@ -6,7 +6,7 @@
 //  Copyright © 2016 Michal Kalis. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @import CoreData;
 
@@ -21,5 +21,6 @@ typedef void (^InitCallbackBlock)(void);
  *  Main context is a "single source of truth" used to access UI
  */
 @property (nonatomic, readonly) NSManagedObjectContext *mainContext;
+@property (nonatomic, readonly) NSManagedObjectContext *privateContext;
 
 @end

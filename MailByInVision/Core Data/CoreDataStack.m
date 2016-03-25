@@ -15,7 +15,7 @@
  *  Private context is initialized with `private` queue concurrency type to handle data processing.
  *  Private context is a parent context of the `mainContext`
  */
-@property (strong) NSManagedObjectContext *privateContext;
+@property (strong, readwrite) NSManagedObjectContext *privateContext;
 
 @property (copy) InitCallbackBlock initCallback;
 

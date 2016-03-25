@@ -16,17 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Message (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *attachmentName;
-@property (nullable, nonatomic, retain) NSString *attachmentURL;
+@property (nullable, nonatomic, retain) NSString *attachmentURLString;
 @property (nullable, nonatomic, retain) NSNumber *lastMessage;
-@property (nullable, nonatomic, retain) NSNumber *mailbox;
+@property (nullable, nonatomic, retain) NSString *mailbox;
+@property (nonnull, nonatomic, retain) NSString *remoteID;
 @property (nullable, nonatomic, retain) NSNumber *read;
-@property (nullable, nonatomic, retain) NSString *receivedAt;
+@property (nonnull, nonatomic, retain) NSNumber *receivedAt;
 @property (nullable, nonatomic, retain) NSString *subject;
-@property (nullable, nonatomic, retain) Contact *from;
+@property (nullable, nonatomic, retain) NSString *body;
+@property (nonnull, nonatomic, retain) Contact *from;
 @property (nullable, nonatomic, retain) NSSet<Group *> *groups;
 @property (nullable, nonatomic, retain) NSSet<Mark *> *marks;
-@property (nullable, nonatomic, retain) NSManagedObject *relationship;
-@property (nullable, nonatomic, retain) Thread *thread;
 @property (nullable, nonatomic, retain) NSSet<Contact *> *to;
 
 @end

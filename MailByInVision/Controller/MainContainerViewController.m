@@ -10,6 +10,7 @@
 #import "MenuViewController.h"
 #import "MenuDataSource.h"
 #import "ContentNavigationController.h"
+#import "UIViewController+CoreDataStack.h"
 
 @interface MainContainerViewController () <UIGestureRecognizerDelegate, MenuButtonDelegate, MenuViewControllerDelegate>
 
@@ -62,6 +63,9 @@ const CGFloat SlidableWidth = 30;
         [self.contentNavigationController.view removeFromSuperview];
         [self.contentNavigationController removeFromParentViewController];
     }
+    
+    // Pass the reference to `CoreDataStack` instance
+    controller.topViewController.coreDataStack = self.coreDataStack;
     
     self.contentNavigationController = controller;
     
