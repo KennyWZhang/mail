@@ -13,5 +13,9 @@
 @interface InboxTableViewCell : UITableViewCell <ConfigurableCell>
 
 @property (weak, nonatomic) IBOutlet UILabel *subjectLabel;
+@property (weak, nonatomic) IBOutlet UILabel *receivedAtLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fromLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *attachmentIcon;
 
 @end

@@ -40,7 +40,7 @@
 }
 
 - (NSInteger)numberOfItemsInSection:(NSInteger)section {
-     id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
+    id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
     return [sectionInfo numberOfObjects];
 }
 
@@ -52,6 +52,10 @@
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     switch (type) {
+        case NSFetchedResultsChangeInsert: {
+            [self.updates addObject:[DataProviderUpdate dataProviderUpdate:type indexPath:newIndexPath]];
+            break;
+        }
         case NSFetchedResultsChangeUpdate: {
             [self.updates addObject:[DataProviderUpdate dataProviderUpdate:type indexPath:indexPath object:anObject]];
             break;
@@ -60,11 +64,13 @@
             [self.updates addObject:[DataProviderUpdate dataProviderUpdate:type indexPath:indexPath object:anObject movedToIndexPath:newIndexPath]];
             break;
         }
-            
-        default: {
+        case NSFetchedResultsChangeDelete: {
             [self.updates addObject:[DataProviderUpdate dataProviderUpdate:type indexPath:indexPath]];
             break;
         }
+            
+        default:
+            break;
     }
 }
 

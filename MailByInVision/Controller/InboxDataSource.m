@@ -76,6 +76,8 @@
                 break;
         }
     }
+    
+    [self.tableView endUpdates];
 }
 
 #pragma mark - Table View Data Source

@@ -33,31 +33,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGL-yQ-Zb5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGL-yQ-Zb5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InboxTableViewCell" id="dRW-Gg-JSU" customClass="InboxTableViewCell">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dRW-Gg-JSU" id="Ebk-HL-Xpl">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-HX-dZn">
-                                                    <rect key="frame" x="53" y="8" width="527" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-HX-dZn">
+                                                    <rect key="frame" x="45" y="29" width="46" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inbox-unread-icon" translatesAutoresizingMaskIntoConstraints="NO" id="i14-PE-q4r">
+                                                    <rect key="frame" x="15" y="27" width="16" height="16"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wA-Dg-Frm">
+                                                    <rect key="frame" x="555" y="10" width="31" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jon Dowdle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdU-KC-OSD">
+                                                    <rect key="frame" x="45" y="6" width="90" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inbox-attachment-icon" translatesAutoresizingMaskIntoConstraints="NO" id="StX-H8-d97">
+                                                    <rect key="frame" x="532" y="11" width="13" height="12"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imm-H6-sVl">
+                                                    <rect key="frame" x="45" y="50" width="29" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4XJ-HX-dZn" firstAttribute="top" secondItem="Ebk-HL-Xpl" secondAttribute="top" constant="8" id="OAQ-iM-bzh"/>
-                                                <constraint firstAttribute="trailing" secondItem="4XJ-HX-dZn" secondAttribute="trailing" constant="20" id="U9F-xf-Mz7"/>
-                                                <constraint firstItem="4XJ-HX-dZn" firstAttribute="leading" secondItem="Ebk-HL-Xpl" secondAttribute="leading" constant="53" id="skP-VW-bi7"/>
+                                                <constraint firstItem="9wA-Dg-Frm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4XJ-HX-dZn" secondAttribute="trailing" constant="13" id="3Gu-sz-pu5"/>
+                                                <constraint firstItem="tdU-KC-OSD" firstAttribute="top" secondItem="Ebk-HL-Xpl" secondAttribute="top" constant="6" id="7Lb-UO-PtM"/>
+                                                <constraint firstItem="StX-H8-d97" firstAttribute="top" secondItem="Ebk-HL-Xpl" secondAttribute="top" constant="11" id="HcF-yn-fUp"/>
+                                                <constraint firstItem="9wA-Dg-Frm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tdU-KC-OSD" secondAttribute="trailing" constant="40" id="Jp6-yo-An6"/>
+                                                <constraint firstItem="i14-PE-q4r" firstAttribute="leading" secondItem="Ebk-HL-Xpl" secondAttribute="leading" constant="15" id="Lbm-yf-qlN"/>
+                                                <constraint firstAttribute="trailing" secondItem="9wA-Dg-Frm" secondAttribute="trailing" constant="14" id="OGJ-pQ-ZBD"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Imm-H6-sVl" secondAttribute="trailing" constant="50" id="QsA-od-pE9"/>
+                                                <constraint firstItem="9wA-Dg-Frm" firstAttribute="leading" secondItem="StX-H8-d97" secondAttribute="trailing" constant="10" id="YeD-Yb-fnQ"/>
+                                                <constraint firstItem="4XJ-HX-dZn" firstAttribute="leading" secondItem="tdU-KC-OSD" secondAttribute="leading" id="ZM2-up-Tgg"/>
+                                                <constraint firstItem="Imm-H6-sVl" firstAttribute="leading" secondItem="tdU-KC-OSD" secondAttribute="leading" id="bM5-yt-Jmk"/>
+                                                <constraint firstItem="i14-PE-q4r" firstAttribute="centerY" secondItem="Ebk-HL-Xpl" secondAttribute="centerY" constant="-2" id="clx-mz-NcD"/>
+                                                <constraint firstItem="4XJ-HX-dZn" firstAttribute="centerY" secondItem="Ebk-HL-Xpl" secondAttribute="centerY" id="jId-bu-fo8"/>
+                                                <constraint firstItem="tdU-KC-OSD" firstAttribute="leading" secondItem="Ebk-HL-Xpl" secondAttribute="leading" constant="45" id="kDp-zQ-wOh"/>
+                                                <constraint firstItem="9wA-Dg-Frm" firstAttribute="top" secondItem="Ebk-HL-Xpl" secondAttribute="top" constant="10" id="mSI-LK-woN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Imm-H6-sVl" secondAttribute="bottom" constant="10" id="oxS-uc-lyA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="attachmentIcon" destination="StX-H8-d97" id="A8a-QK-D2t"/>
+                                            <outlet property="bodyLabel" destination="Imm-H6-sVl" id="cRJ-hs-yPG"/>
+                                            <outlet property="fromLabel" destination="tdU-KC-OSD" id="HJp-Nj-TZ2"/>
+                                            <outlet property="receivedAtLabel" destination="9wA-Dg-Frm" id="sMy-S8-7Kw"/>
                                             <outlet property="subjectLabel" destination="4XJ-HX-dZn" id="0y7-Ck-7gG"/>
                                         </connections>
                                     </tableViewCell>
@@ -82,4 +122,8 @@
             <point key="canvasLocation" x="245" y="-5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="inbox-attachment-icon" width="13" height="12"/>
+        <image name="inbox-unread-icon" width="16" height="16"/>
+    </resources>
 </document>

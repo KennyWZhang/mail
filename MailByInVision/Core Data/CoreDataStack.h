@@ -21,6 +21,5 @@ typedef void (^InitCallbackBlock)(void);
  *  Main context is a "single source of truth" used to access UI
  */
 @property (nonatomic, readonly) NSManagedObjectContext *mainContext;
-@property (nonatomic, readonly) NSManagedObjectContext *privateContext;
 
 @end

@@ -23,4 +23,8 @@
 + (UIColor *)applicationMenuMarked3;
 + (UIColor *)applicationMenuMarked4;
 
++ (UIColor *)applicationBlue;
++ (UIColor *)applicationUnreadLabel;
++ (UIColor *)applicationReadLabel;
+
 @end

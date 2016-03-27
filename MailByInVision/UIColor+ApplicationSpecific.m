@@ -11,6 +11,8 @@
 
 @implementation UIColor (ApplicationSpecific)
 
+// Menu
+
 + (UIColor *)applicationMenuSectionColor {
     return [UIColor colorWithHexString:@"#3B3841"];
 }
@@ -49,6 +51,20 @@
 
 + (UIColor *)applicationMenuMarked4 {
     return [UIColor colorWithHexString:@"#F8FF4C"];
+}
+
+// Inbox
+
++ (UIColor *)applicationBlue {
+    return [UIColor colorWithHexString:@"#79BFFF"];
+}
+
++ (UIColor *)applicationUnreadLabel {
+    return [UIColor colorWithHexString:@"#444444"];
+}
+
++ (UIColor *)applicationReadLabel {
+    return [UIColor colorWithHexString:@"#6C6D6D"];
 }
 
 @end

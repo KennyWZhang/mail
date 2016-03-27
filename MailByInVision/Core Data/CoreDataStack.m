@@ -12,7 +12,7 @@
 
 @property (strong, readwrite) NSManagedObjectContext *mainContext;
 /**
- *  Private context is initialized with `private` queue concurrency type to handle data processing.
+ *  Private context is initialized with `private` queue concurrency type connected to persistent store coordinator.
  *  Private context is a parent context of the `mainContext`
  */
 @property (strong, readwrite) NSManagedObjectContext *privateContext;

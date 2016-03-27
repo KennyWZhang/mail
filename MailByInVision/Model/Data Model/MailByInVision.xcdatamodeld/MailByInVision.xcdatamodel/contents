@@ -28,7 +28,8 @@
         <attribute name="receivedAt" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="remoteID" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="receivedMessages" inverseEntity="Contact" syncable="YES"/>
+        <attribute name="threadID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="from" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="receivedMessages" inverseEntity="Contact" syncable="YES"/>
         <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group" inverseName="messages" inverseEntity="Group" syncable="YES"/>
         <relationship name="marks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mark" inverseName="messages" inverseEntity="Mark" syncable="YES"/>
         <relationship name="to" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Contact" inverseName="sentMessages" inverseEntity="Contact" syncable="YES"/>
@@ -37,6 +38,6 @@
         <element name="Contact" positionX="-128" positionY="-54" width="128" height="148"/>
         <element name="Group" positionX="-90" positionY="107" width="128" height="73"/>
         <element name="Mark" positionX="-92" positionY="306" width="128" height="88"/>
-        <element name="Message" positionX="-387" positionY="36" width="128" height="240"/>
+        <element name="Message" positionX="-387" positionY="36" width="128" height="253"/>
     </elements>
 </model>

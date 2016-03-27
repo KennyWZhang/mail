@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *lastMessage;
 @property (nullable, nonatomic, retain) NSString *mailbox;
 @property (nonnull, nonatomic, retain) NSString *remoteID;
+@property (nullable, nonatomic, retain) NSString *threadID;
 @property (nullable, nonatomic, retain) NSNumber *read;
 @property (nonnull, nonatomic, retain) NSNumber *receivedAt;
 @property (nullable, nonatomic, retain) NSString *subject;

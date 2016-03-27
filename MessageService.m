@@ -24,7 +24,7 @@
         NSArray *messages = [responseObject objectForKeyNotNull:@"messages"];
         for (NSDictionary *messageDictionary in messages) {
             NSError *error = nil;
-            [resultMessages addObject:[MessageParser messageFromJSONData:messageDictionary inContext:coreDataStack.privateContext error:&error]];
+            [resultMessages addObject:[MessageParser messageFromJSONData:messageDictionary inContext:coreDataStack.mainContext error:&error]];
         }
         
         [coreDataStack save];

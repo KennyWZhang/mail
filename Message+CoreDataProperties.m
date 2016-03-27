@@ -18,6 +18,7 @@
 @dynamic lastMessage;
 @dynamic mailbox;
 @dynamic remoteID;
+@dynamic threadID;
 @dynamic read;
 @dynamic receivedAt;
 @dynamic subject;
