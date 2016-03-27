@@ -16,9 +16,10 @@
 
 - (NSAttributedString *)formattedFromText {
     NSString *text = @"";
+    NSString *threadPrefixText = @"me, ";
     
     if (self.threadID) {
-        text = @"me, ";
+        text = threadPrefixText;
     }
     
     text = [NSString stringWithFormat:@"%@%@ %@", text, self.from.firstname, self.from.lastname];
@@ -33,7 +34,7 @@
     }
     
     if (self.threadID) {
-        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationReadLabel] range:NSMakeRange(0, 3)];
+        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationReadLabel] range:NSMakeRange(0, threadPrefixText.length)];
     }
     
     return attributedText;

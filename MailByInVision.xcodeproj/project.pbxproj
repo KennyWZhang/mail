@@ -13,6 +13,7 @@
 		500C97AF1CA5D9670021FDAC /* DataProviderUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97AE1CA5D9670021FDAC /* DataProviderUpdate.m */; };
 		500C97B21CA5E29E0021FDAC /* InboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97B11CA5E29E0021FDAC /* InboxDataSource.m */; };
 		500C97B81CA5ED310021FDAC /* InboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */; };
+		500C97BD1CA82DFB0021FDAC /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97BC1CA82DFB0021FDAC /* NSDate+Utils.m */; };
 		504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */; };
 		504DB8341C9F119000A76D61 /* Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8221C9F119000A76D61 /* Mark.m */; };
 		504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */; };
@@ -86,6 +87,8 @@
 		500C97B51CA5EC110021FDAC /* DataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataProvider.h; sourceTree = "<group>"; };
 		500C97B61CA5ED310021FDAC /* InboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		500C97BB1CA82DFB0021FDAC /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		500C97BC1CA82DFB0021FDAC /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
 		504DB81F1C9F119000A76D61 /* Mark+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Mark+CoreDataProperties.h"; path = "../../Mark+CoreDataProperties.h"; sourceTree = "<group>"; };
 		504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Mark+CoreDataProperties.m"; path = "../../Mark+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB8211C9F119000A76D61 /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mark.h; path = ../../Mark.h; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */,
 				50938D081CA3EA10009F6F51 /* NSManagedObject+SafeMapping.h */,
 				50938D091CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m */,
+				500C97BB1CA82DFB0021FDAC /* NSDate+Utils.h */,
+				500C97BC1CA82DFB0021FDAC /* NSDate+Utils.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				50938D071CA3D65E009F6F51 /* NSString+Emptiness.m in Sources */,
 				504DB83C1C9F119000A76D61 /* Message.m in Sources */,
 				508391D31C98667E003514EF /* main.m in Sources */,
+				500C97BD1CA82DFB0021FDAC /* NSDate+Utils.m in Sources */,
 				508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */,
 				504DB83B1C9F119000A76D61 /* Message+CoreDataProperties.m in Sources */,
 				508392041C998D8D003514EF /* MenuViewController.m in Sources */,

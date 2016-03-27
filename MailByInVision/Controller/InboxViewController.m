@@ -47,7 +47,11 @@
 
 - (void)setupTableView {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[Message entityName]];
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"receivedAt" ascending:true]];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"receivedAt" ascending:false]];
+    // Fetch only message that are not part of a thread or only the newest message in a thread
+    NSPredicate *singleMessage = [NSPredicate predicateWithFormat:@"threadID = nil"];
+    NSPredicate *lastMessageInThread = [NSPredicate predicateWithFormat:@"lastMessage == YES"];
+    request.predicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[singleMessage, lastMessageInThread]];
     request.returnsObjectsAsFaults = NO;
     request.fetchBatchSize = 40;
     NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.coreDataStack.mainContext sectionNameKeyPath:nil cacheName:nil];

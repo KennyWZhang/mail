@@ -9,6 +9,7 @@
 #import "InboxTableViewCell.h"
 #import "Message.h"
 #import "UIColor+ApplicationSpecific.h"
+#import "NSDate+Utils.h"
 
 @implementation InboxTableViewCell
 
@@ -25,8 +26,13 @@
     self.fromLabel.attributedText = [message formattedFromText];
     self.subjectLabel.text = message.subject;
     self.bodyLabel.text = message.body;
+    self.unreadIcon.hidden = message.read.boolValue;
     self.attachmentIcon.hidden = message.attachmentURLString == nil;
-    self.receivedAtLabel.text = @"13:47";
+    
+    NSDate *receivedAtDate = [NSDate dateWithTimeIntervalSince1970:message.receivedAt.doubleValue];
+    if (receivedAtDate) {
+        self.receivedAtLabel.text = [receivedAtDate wordsExpression];
+    }
     
     [self setupColorsWithMessage:message];
 }
@@ -34,7 +40,9 @@
 #pragma mark - Private
 
 - (void)setupColorsWithMessage:(Message *)message {
-    self.subjectLabel.textColor = message.read ? [UIColor applicationReadLabel] : [UIColor applicationUnreadLabel];
+    UIColor *resultColor = message.read.boolValue ? [UIColor applicationReadLabel] : [UIColor applicationUnreadLabel];
+    self.fromLabel.textColor = resultColor;
+    self.subjectLabel.textColor = resultColor;
 }
 
 @end

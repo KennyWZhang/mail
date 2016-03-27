@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *attachmentIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *unreadIcon;
 
 @end
