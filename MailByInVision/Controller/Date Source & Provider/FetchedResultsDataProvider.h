@@ -12,6 +12,7 @@
 @import CoreData;
 
 @class DataProviderUpdate;
+@class Message;
 
 @protocol DataProviderDelegate <NSObject>
 
@@ -22,6 +23,8 @@
 @interface FetchedResultsDataProvider : NSObject <NSFetchedResultsControllerDelegate, DataProvider>
 
 - (instancetype)initWithFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController delegate:(id<DataProviderDelegate>)delegate;
+
+- (void)filteredMessagesUsingPredicate:(NSPredicate *)predicate;
 
 @property (nonatomic, weak) id<DataProviderDelegate> delegate;
 

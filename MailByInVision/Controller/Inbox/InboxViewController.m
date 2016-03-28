@@ -18,11 +18,18 @@
 #import "UITableViewCell+ReuseIdentifier.h"
 #import "MessageDetailViewController.h"
 #import "UIColor+ApplicationSpecific.h"
+#import "SearchTextField.h"
 
 @interface InboxViewController () <DataProviderDelegate, DataSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) InboxDataSource *dataSource;
+
+// Search
+@property (weak, nonatomic) IBOutlet UIView *searchContainerView;
+@property (weak, nonatomic) IBOutlet SearchTextField *searchTextField;
+@property (nonatomic, strong) NSCompoundPredicate *messagesPredicate;
 
 @end
 
@@ -34,6 +41,8 @@
     self.title = @"Inbox";
     
     [self setupTableView];
+    
+    [self customizeUI];
     
     [MessageService fetchAllMessagesWithCoreDataStack:self.coreDataStack requestResult:^(NSArray *messages, NSError *error) {
         NSLog(@"messages %@", messages);
@@ -50,12 +59,22 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.view endEditing:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Private
+
+- (void)customizeUI {
+    self.searchContainerView.backgroundColor = [UIColor applicationLightGrayBackgroundColor];
+}
 
 - (void)setupTableView {
     // UI customisation
@@ -67,10 +86,13 @@
     // Data provider & data source
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[Message entityName]];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"receivedAt" ascending:false]];
+    
     // Fetch only message that are not part of a thread or only the newest message in a thread
-    NSPredicate *singleMessage = [NSPredicate predicateWithFormat:@"threadID = nil"];
-    NSPredicate *lastMessageInThread = [NSPredicate predicateWithFormat:@"lastMessage == YES"];
-    request.predicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[singleMessage, lastMessageInThread]];
+    NSPredicate *singleMessagePredicate = [NSPredicate predicateWithFormat:@"threadID = nil"];
+    NSPredicate *lastMessageInThreadPredicate = [NSPredicate predicateWithFormat:@"lastMessage == YES"];
+    self.messagesPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[singleMessagePredicate, lastMessageInThreadPredicate]];
+    request.predicate = self.messagesPredicate;
+    
     request.returnsObjectsAsFaults = NO;
     request.fetchBatchSize = 40;
     NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.coreDataStack.mainContext sectionNameKeyPath:nil cacheName:nil];
@@ -87,6 +109,9 @@
 #pragma mark - Data Provider Delegate
 
 - (void)dataProviderDidUpdateWithUpdates:(NSArray<DataProviderUpdate *> *)updates {
+    [self.activityIndicator stopAnimating];
+    self.tableView.hidden = NO;
+    
     [self.dataSource processUpdates:updates];
 }
 
@@ -97,6 +122,40 @@
     controller.coreDataStack = self.coreDataStack;
     
     [self.navigationController pushViewController:controller animated:true];
+}
+
+#pragma mark - Search
+
+- (void)filterContentForSearchText:(NSString *)searchText {
+    // Actual search predicates
+    NSPredicate *bodyPredicate = [NSPredicate predicateWithFormat:@"body contains[c] %@", searchText];
+    NSPredicate *subjectPredicate = [NSPredicate predicateWithFormat:@"subject contains[c] %@", searchText];
+    NSPredicate *fromFirstnamePredicate = [NSPredicate predicateWithFormat:@"from.firstname contains[c] %@", searchText];
+    NSPredicate *fromLastnamePredicate = [NSPredicate predicateWithFormat:@"from.lastname contains[c] %@", searchText];
+    NSCompoundPredicate *searchPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[bodyPredicate, subjectPredicate, fromFirstnamePredicate, fromLastnamePredicate]];
+    
+    // Combine search predicates with default messages predicate used to filter out unneccessary messages from threads
+    NSCompoundPredicate *compoundPredicate = searchText.length > 0 ? [NSCompoundPredicate andPredicateWithSubpredicates:@[self.messagesPredicate, searchPredicate]] : self.messagesPredicate;
+    
+    [self.dataSource filteredMessagesUsingPredicate:compoundPredicate];
+}
+
+- (IBAction)textFieldValueChanged:(UITextField *)textField {
+    // Search and reload data source
+    [self filterContentForSearchText:textField.text];
+    [self.tableView reloadData];
+}
+
+- (IBAction)textFieldEditingDidEnd:(UITextField *)sender {
+    [self cancelSearch];
+}
+
+- (void)cancelSearch {
+    [self filterContentForSearchText:@""];
+    [self.view endEditing:YES];
+    self.searchTextField.text  = @"";
+    
+    [self.tableView reloadData];
 }
 
 @end

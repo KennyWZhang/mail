@@ -81,6 +81,10 @@
     [self.tableView endUpdates];
 }
 
+- (void)filteredMessagesUsingPredicate:(NSPredicate *)predicate {
+    [self.dataProvider filteredMessagesUsingPredicate:predicate];
+}
+
 #pragma mark - Table View Data Source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

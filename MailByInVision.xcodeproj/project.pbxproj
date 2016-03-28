@@ -38,6 +38,7 @@
 		504DB84D1CA06C0E00A76D61 /* NSDictionary+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB84C1CA06C0E00A76D61 /* NSDictionary+Parsing.m */; };
 		504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */; };
 		504DB8541CA088B400A76D61 /* UIViewController+CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */; };
+		50596DFE1CA96E2500DD69B8 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50596DFD1CA96E2500DD69B8 /* SearchTextField.m */; };
 		508391D31C98667E003514EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D21C98667E003514EF /* main.m */; };
 		508391D61C98667E003514EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D51C98667E003514EF /* AppDelegate.m */; };
 		508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */; };
@@ -147,6 +148,8 @@
 		504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CustomInit.m"; sourceTree = "<group>"; };
 		504DB8521CA088B400A76D61 /* UIViewController+CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CoreDataStack.h"; sourceTree = "<group>"; };
 		504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CoreDataStack.m"; sourceTree = "<group>"; };
+		50596DFC1CA96E2500DD69B8 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextField.h; sourceTree = "<group>"; };
+		50596DFD1CA96E2500DD69B8 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextField.m; sourceTree = "<group>"; };
 		508391CE1C98667E003514EF /* MailByInVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailByInVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508391D21C98667E003514EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		508391D41C98667E003514EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 				50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */,
 				500C97D01CA863D60021FDAC /* SeparatorLine.h */,
 				500C97D11CA863D60021FDAC /* SeparatorLine.m */,
+				50596DFC1CA96E2500DD69B8 /* SearchTextField.h */,
+				50596DFD1CA96E2500DD69B8 /* SearchTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
 				50938CF21CA345E4009F6F51 /* Mapper.m in Sources */,
 				500C97CF1CA861AA0021FDAC /* MessageDetailBottomView.m in Sources */,
+				50596DFE1CA96E2500DD69B8 /* SearchTextField.m in Sources */,
 				500C97AF1CA5D9670021FDAC /* DataProviderUpdate.m in Sources */,
 				500C97DE1CA891610021FDAC /* ImageCache.m in Sources */,
 				500C97A91CA5D2B10021FDAC /* FetchedResultsDataProvider.m in Sources */,

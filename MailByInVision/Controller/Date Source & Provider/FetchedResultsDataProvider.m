@@ -9,6 +9,7 @@
 #import "FetchedResultsDataProvider.h"
 #import "DataProviderUpdate.h"
 #import "DataProviderUpdate.h"
+#import "Message.h"
 
 @interface FetchedResultsDataProvider ()
 
@@ -42,6 +43,12 @@
 - (NSInteger)numberOfItemsInSection:(NSInteger)section {
     id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
     return [sectionInfo numberOfObjects];
+}
+
+- (void)filteredMessagesUsingPredicate:(NSPredicate *)predicate {
+    self.fetchedResultsController.fetchRequest.predicate = predicate;
+    [self.fetchedResultsController performFetch:nil];
+#warning TODO handle error
 }
 
 #pragma mark - Fetched Results Controller Delegate

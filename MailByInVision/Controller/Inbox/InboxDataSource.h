@@ -12,6 +12,7 @@
 
 @class FetchedResultsDataProvider;
 @class DataProviderUpdate;
+@class Message;
 
 @interface InboxDataSource : NSObject
 
@@ -20,5 +21,7 @@
 - (instancetype)initWithTableView:(UITableView *)tableView dataProvider:(FetchedResultsDataProvider *)dataProvider delegate:(id<DataSourceDelegate>)delegate;
 
 - (void)processUpdates:(NSArray<DataProviderUpdate *> *)updates;
+
+- (void)filteredMessagesUsingPredicate:(NSPredicate *)predicate;
 
 @end
