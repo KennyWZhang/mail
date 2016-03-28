@@ -72,8 +72,14 @@
 }
 
 - (void)customizeAppearance {
+    // Navigation bar
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor applicationUnreadLabelColor], NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:17.0f]}];
+    
+    // Back button
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"navigation-bar-back-button"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor applicationUnreadLabelColor], NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Medium" size:14.0f]} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -2) forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

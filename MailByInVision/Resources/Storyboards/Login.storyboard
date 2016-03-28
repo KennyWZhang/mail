@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wrL-hz-Kcr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mgB-Ms-RrO">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="RCA-IF-qwe">
-            <objects>
-                <navigationController id="wrL-hz-Kcr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0pR-6D-Rtw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mgB-Ms-RrO" kind="relationship" relationship="rootViewController" id="Qy8-sP-4OM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N1i-SD-c1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-502" y="326"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="lao-IE-poa">
             <objects>
@@ -92,15 +76,27 @@
                                     <constraint firstAttribute="trailing" secondItem="rVj-YC-Xfx" secondAttribute="trailing" id="nV8-SH-oeF"/>
                                 </constraints>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcb-EC-wt3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8fZ-fh-Nou"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Login" id="Aqd-Zs-y5B"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wcb-EC-wt3" firstAttribute="top" secondItem="xkD-Q5-DZa" secondAttribute="top" constant="20" id="0Tc-Vd-4ml"/>
+                            <constraint firstAttribute="trailing" secondItem="wcb-EC-wt3" secondAttribute="trailing" id="ADQ-zd-yPE"/>
                             <constraint firstItem="rVj-YC-Xfx" firstAttribute="width" secondItem="xkD-Q5-DZa" secondAttribute="width" id="Mqm-0S-5OV"/>
                             <constraint firstItem="CGe-Ru-elD" firstAttribute="height" secondItem="xkD-Q5-DZa" secondAttribute="height" id="Rv6-da-Zzg"/>
                             <constraint firstAttribute="trailing" secondItem="CGe-Ru-elD" secondAttribute="trailing" id="SOk-OG-ypg"/>
                             <constraint firstItem="CGe-Ru-elD" firstAttribute="top" secondItem="xkD-Q5-DZa" secondAttribute="top" id="Smm-cb-qa9"/>
                             <constraint firstItem="CGe-Ru-elD" firstAttribute="leading" secondItem="xkD-Q5-DZa" secondAttribute="leading" id="WHs-aH-iPS"/>
                             <constraint firstItem="CGe-Ru-elD" firstAttribute="top" secondItem="xkD-Q5-DZa" secondAttribute="top" id="a7p-Xb-NWT"/>
+                            <constraint firstItem="wcb-EC-wt3" firstAttribute="leading" secondItem="xkD-Q5-DZa" secondAttribute="leading" id="oL9-HT-R4q"/>
                             <constraint firstItem="bCF-To-Dpo" firstAttribute="top" secondItem="CGe-Ru-elD" secondAttribute="bottom" id="oeE-Te-zkt"/>
                         </constraints>
                         <variation key="default">
@@ -110,6 +106,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="HuZ-XZ-6Gi"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
