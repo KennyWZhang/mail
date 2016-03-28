@@ -29,6 +29,7 @@
 // Search
 @property (weak, nonatomic) IBOutlet UIView *searchContainerView;
 @property (weak, nonatomic) IBOutlet SearchTextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *searchIcon;
 @property (nonatomic, strong) NSCompoundPredicate *messagesPredicate;
 
 @end
@@ -74,6 +75,11 @@
 
 - (void)customizeUI {
     self.searchContainerView.backgroundColor = [UIColor applicationLightGrayBackgroundColor];
+    
+    UIImage *image = [[UIImage imageNamed:@"inbox-new-message-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:nil action:nil];
+    [button setImageInsets:UIEdgeInsetsMake(0, -7, 0, 7)];
+    self.navigationItem.rightBarButtonItem = button;
 }
 
 - (void)setupTableView {
@@ -147,7 +153,12 @@
 }
 
 - (IBAction)textFieldEditingDidEnd:(UITextField *)sender {
+    self.searchIcon.image = [UIImage imageNamed:@"inbox-search-icon"];
     [self cancelSearch];
+}
+
+- (IBAction)textFieldEditingDidBegin:(UITextField *)sender {
+    self.searchIcon.image = [UIImage imageNamed:@"inbox-search-icon-active"];
 }
 
 - (void)cancelSearch {

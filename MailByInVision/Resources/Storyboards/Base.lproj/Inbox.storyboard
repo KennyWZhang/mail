@@ -131,6 +131,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                         <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="NB7-HY-u1b" eventType="editingDidBegin" id="ChX-nW-ivE"/>
                                             <action selector="textFieldEditingDidEnd:" destination="NB7-HY-u1b" eventType="editingDidEnd" id="hfH-K9-biP"/>
                                             <action selector="textFieldValueChanged:" destination="NB7-HY-u1b" eventType="editingChanged" id="fvM-ap-nrL"/>
                                         </connections>
@@ -168,6 +169,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="xCT-q9-D8L" id="Hlp-w1-0un"/>
                         <outlet property="searchContainerView" destination="4GM-gE-doP" id="JUa-e6-Eau"/>
+                        <outlet property="searchIcon" destination="iYn-by-Inc" id="Zqx-lW-max"/>
                         <outlet property="searchTextField" destination="eLe-Ok-vja" id="pmE-ui-eOf"/>
                         <outlet property="tableView" destination="gGL-yQ-Zb5" id="RRz-WZ-KIQ"/>
                     </connections>
