@@ -65,7 +65,9 @@
     barButtonItem.image = image;
     self.popoverController = pc;
     ContentNavigationController *detailViewController = self.splitViewController.viewControllers[1];
-    detailViewController.topViewController.navigationItem.leftBarButtonItems = [@[barButtonItem] arrayByAddingObjectsFromArray:detailViewController.topViewController.navigationItem.leftBarButtonItems];
+    if (detailViewController.topViewController == detailViewController.viewControllers.firstObject) {
+        detailViewController.topViewController.navigationItem.leftBarButtonItems = [@[barButtonItem] arrayByAddingObjectsFromArray:detailViewController.topViewController.navigationItem.leftBarButtonItems];
+    }
 }
 
 - (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
@@ -74,8 +76,7 @@
     if (detailViewController.topViewController.navigationItem.leftBarButtonItems.count > 2) {
         NSRange rangeOfOtherBarButtons = NSMakeRange(1, detailViewController.topViewController.navigationItem.leftBarButtonItems.count-1);
         detailViewController.topViewController.navigationItem.leftBarButtonItems = [detailViewController.topViewController.navigationItem.leftBarButtonItems subarrayWithRange:rangeOfOtherBarButtons];
-    }
-    else {
+    } else {
         detailViewController.topViewController.navigationItem.leftBarButtonItems = @[];
     }
 }

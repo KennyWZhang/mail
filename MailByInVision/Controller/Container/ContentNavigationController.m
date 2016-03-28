@@ -27,6 +27,13 @@
     self.delegate = self;
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    if (IS_IPAD && [UIScreen mainScreen].bounds.size.width > [UIScreen mainScreen].bounds.size.height) {
+        // Landscape
+        self.viewControllers.firstObject.navigationItem.leftBarButtonItems = @[];
+    }
+}
+
 #pragma mark - Actions
 
 - (void)toggleMenu:(UIBarButtonItem *)button {
@@ -52,11 +59,8 @@
     }
     else {
         // Push
-        if (IS_IPHONE) {
-            viewController.navigationItem.leftBarButtonItems = @[];
-        }
+        viewController.navigationItem.leftBarButtonItems = @[];
     }
-    
 }
 
 @end
