@@ -15,6 +15,7 @@
 #import "UIViewController+CoreDataStack.h"
 #import "ScreenTransitionService.h"
 #import "LoginViewController.h"
+#import "UIColor+ApplicationSpecific.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -55,6 +56,7 @@
 
 - (void)customizeAppearance {
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor applicationUnreadLabelColor], NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:17.0f]}];
 }
 
 - (void)completeUserInterface {
