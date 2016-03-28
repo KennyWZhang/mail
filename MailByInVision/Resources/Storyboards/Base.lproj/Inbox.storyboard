@@ -196,28 +196,27 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message-attachment-image" translatesAutoresizingMaskIntoConstraints="NO" id="Rhw-vF-NtA">
                                             <rect key="frame" x="15" y="55" width="45" height="45"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filename" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-0e-Pn7">
-                                            <rect key="frame" x="74" y="67" width="76" height="22"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-LV-ayR">
+                                            <rect key="frame" x="74" y="61" width="76" height="34"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <state key="normal" title="Filename"/>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="iCG-02-Owt" firstAttribute="leading" secondItem="PCD-CL-J55" secondAttribute="leading" id="3BQ-dx-7dR"/>
                                         <constraint firstItem="iCG-02-Owt" firstAttribute="top" secondItem="PCD-CL-J55" secondAttribute="top" constant="40" id="3PN-iB-bGK"/>
+                                        <constraint firstItem="JR6-LV-ayR" firstAttribute="leading" secondItem="Rhw-vF-NtA" secondAttribute="trailing" constant="14" id="6Gm-yd-w66"/>
+                                        <constraint firstItem="JR6-LV-ayR" firstAttribute="centerY" secondItem="Rhw-vF-NtA" secondAttribute="centerY" id="Gzr-ef-lj8"/>
                                         <constraint firstAttribute="trailing" secondItem="iCG-02-Owt" secondAttribute="trailing" id="LB1-Ny-74m"/>
                                         <constraint firstItem="KiF-KC-p74" firstAttribute="leading" secondItem="PCD-CL-J55" secondAttribute="leading" constant="15" id="MVK-0R-yM7"/>
-                                        <constraint firstItem="dfc-0e-Pn7" firstAttribute="leading" secondItem="Rhw-vF-NtA" secondAttribute="trailing" constant="14" id="NCR-Kj-7cK"/>
                                         <constraint firstItem="Rhw-vF-NtA" firstAttribute="top" secondItem="KiF-KC-p74" secondAttribute="bottom" constant="29" id="NSI-p0-L4h"/>
                                         <constraint firstItem="KiF-KC-p74" firstAttribute="top" secondItem="PCD-CL-J55" secondAttribute="top" constant="12" id="TUh-3U-IQ2"/>
-                                        <constraint firstItem="dfc-0e-Pn7" firstAttribute="centerY" secondItem="Rhw-vF-NtA" secondAttribute="centerY" id="aLs-OG-69a"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dfc-0e-Pn7" secondAttribute="trailing" constant="15" id="fId-9f-9Kb"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JR6-LV-ayR" secondAttribute="trailing" constant="15" id="nbE-aN-TUU"/>
                                         <constraint firstItem="Rhw-vF-NtA" firstAttribute="leading" secondItem="KiF-KC-p74" secondAttribute="leading" id="sf5-KB-6JB"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="attachmentFilenameLabel" destination="dfc-0e-Pn7" id="DOR-Jm-PsQ"/>
+                                        <outlet property="attachmentFilenameButton" destination="JR6-LV-ayR" id="ZL1-P0-zxL"/>
                                         <outlet property="numberOfAttachmentsLabel" destination="KiF-KC-p74" id="DVr-K4-G1I"/>
                                     </connections>
                                 </view>
@@ -229,7 +228,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="message-contact-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="r4m-OU-NWP">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="message-contact-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="r4m-OU-NWP">
                                                     <rect key="frame" x="14" y="15" width="53" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="r4m-OU-NWP" secondAttribute="height" multiplier="1:1" id="Ge5-cQ-KcK"/>
@@ -255,19 +254,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body (expanded)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCb-pU-6o4">
-                                                    <rect key="frame" x="15" y="80" width="107" height="17"/>
+                                                    <rect key="frame" x="15" y="80" width="570" height="17"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To (expanded)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrx-cH-VXc">
-                                                    <rect key="frame" x="82" y="35" width="76" height="14"/>
+                                                    <rect key="frame" x="82" y="34" width="76" height="14"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received at (expanded)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAg-rL-EXh">
-                                                    <rect key="frame" x="82" y="51" width="112" height="13"/>
+                                                    <rect key="frame" x="82" y="52" width="112" height="13"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -293,14 +292,14 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YAg-rL-EXh" secondAttribute="trailing" constant="15" id="QhB-ww-FaI"/>
                                                 <constraint firstItem="2Ey-fd-gtV" firstAttribute="top" secondItem="gd9-8P-pfY" secondAttribute="top" constant="10" id="Rjc-E0-hVM"/>
                                                 <constraint firstItem="r4m-OU-NWP" firstAttribute="leading" secondItem="gd9-8P-pfY" secondAttribute="leading" constant="14" id="S6M-y6-IER"/>
-                                                <constraint firstItem="YAg-rL-EXh" firstAttribute="top" secondItem="yrx-cH-VXc" secondAttribute="bottom" constant="2" id="TaN-ll-P3R"/>
-                                                <constraint firstItem="vCb-pU-6o4" firstAttribute="top" secondItem="r4m-OU-NWP" secondAttribute="bottom" constant="12" id="a7l-Qx-Zjz"/>
+                                                <constraint firstItem="YAg-rL-EXh" firstAttribute="top" secondItem="yrx-cH-VXc" secondAttribute="bottom" constant="4" id="TaN-ll-P3R"/>
+                                                <constraint firstItem="vCb-pU-6o4" firstAttribute="top" secondItem="r4m-OU-NWP" secondAttribute="bottom" priority="750" constant="12" id="a7l-Qx-Zjz"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KxB-pc-q08" secondAttribute="trailing" constant="50" id="aq2-x1-WrH"/>
                                                 <constraint firstItem="WAQ-QA-Tj0" firstAttribute="top" secondItem="KxB-pc-q08" secondAttribute="bottom" constant="8" id="g74-GR-VBP"/>
                                                 <constraint firstAttribute="trailing" secondItem="2Ey-fd-gtV" secondAttribute="trailing" constant="15" id="jbN-qo-jeW"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vCb-pU-6o4" secondAttribute="trailing" constant="15" id="mgF-Hm-cb5"/>
+                                                <constraint firstAttribute="trailing" secondItem="vCb-pU-6o4" secondAttribute="trailing" constant="15" id="mgF-Hm-cb5"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WAQ-QA-Tj0" secondAttribute="trailing" constant="50" id="nFV-iZ-pck"/>
-                                                <constraint firstItem="yrx-cH-VXc" firstAttribute="top" secondItem="KxB-pc-q08" secondAttribute="bottom" constant="1" id="o6B-7q-mOJ"/>
+                                                <constraint firstItem="yrx-cH-VXc" firstAttribute="top" secondItem="KxB-pc-q08" secondAttribute="bottom" id="o6B-7q-mOJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="9CM-RQ-klN" secondAttribute="bottom" constant="9" id="oex-qN-430"/>
                                                 <constraint firstItem="YAg-rL-EXh" firstAttribute="leading" secondItem="yrx-cH-VXc" secondAttribute="leading" id="qUa-Bd-Iq0"/>
                                                 <constraint firstItem="KxB-pc-q08" firstAttribute="top" secondItem="gd9-8P-pfY" secondAttribute="top" constant="15" id="rot-ef-TS5"/>

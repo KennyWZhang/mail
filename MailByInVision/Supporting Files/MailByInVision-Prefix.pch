@@ -17,4 +17,10 @@
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
+// Debug messages
+#ifdef DEBUG
+//#define DEBUG_CACHE
+
+#endif
+
 #endif /* MailByInVision_Prefix_pch */

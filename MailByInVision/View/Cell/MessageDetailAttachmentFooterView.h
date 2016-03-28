@@ -11,6 +11,6 @@
 @interface MessageDetailAttachmentFooterView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOfAttachmentsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *attachmentFilenameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *attachmentFilenameButton;
 
 @end

@@ -13,13 +13,17 @@
 #import "DataProvider.h"
 #import "Message.h"
 #import "MessageDetailTableViewCell.h"
+#import "NSIndexPath+Equality.h"
+#import "UITableViewCell+ReuseIdentifier.h"
 
 @import UIKit;
 
-@interface MessageDetailDataSource () <UITableViewDataSource>
+@interface MessageDetailDataSource () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) FetchedResultsDataProvider *dataProvider;
+
+@property (nonatomic, strong) NSMutableSet<NSIndexPath *> *expandedRowIndexPaths;
 
 @end
 
@@ -31,7 +35,10 @@
         self.dataProvider = dataProvider;
         self.delegate = delegate;
         
+        self.expandedRowIndexPaths = [NSMutableArray array];
+        
         tableView.dataSource = self;
+        tableView.delegate = self;
         [tableView reloadData];
     }
     
@@ -80,6 +87,31 @@
     [self.tableView endUpdates];
 }
 
+#pragma mark - Private
+
+- (BOOL)determineExpandedIndexPath:(NSIndexPath *)indexPath {
+    __block BOOL isCellExpanded = NO;
+    [self.expandedRowIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull expandedIndexPath, BOOL * _Nonnull stop) {
+        if ([indexPath isEqualToIndexPath:expandedIndexPath]) {
+            isCellExpanded = YES;
+        }
+    }];
+    
+    return isCellExpanded;
+}
+
+- (void)removeExpandedIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *indexPathToRemove = nil;
+    for (NSIndexPath *expandedIndexPath in self.expandedRowIndexPaths) {
+        if ([indexPath isEqualToIndexPath:expandedIndexPath]) {
+            indexPathToRemove = indexPath;
+            break;
+        }
+    }
+    
+    [self.expandedRowIndexPaths removeObject:indexPathToRemove];
+}
+
 #pragma mark - Table View Data Source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -94,7 +126,48 @@
     
     [cell configureForObject:message];
     
+    cell.expanded = [self determineExpandedIndexPath:indexPath];
+    
     return cell;
+}
+
+#pragma mark - Table View Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self determineExpandedIndexPath:indexPath]) {
+        Message *message = (Message *)[self.dataProvider objectAtIndexPath:indexPath];
+        NSString *identifier = [self.delegate cellIdentifierForObject:message];
+        
+        MessageDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        
+        [cell configureForObject:message];
+        
+        cell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(tableView.bounds), CGRectGetHeight(cell.bounds));
+        [cell setNeedsLayout];
+        [cell layoutIfNeeded];
+        
+        CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+        
+        // + 1 because of separator
+        height += 1;
+        
+        return height;
+    }
+    return 86;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // Expand or collapse message
+    if ([self determineExpandedIndexPath:indexPath]) {
+        [self removeExpandedIndexPath:indexPath];
+    }
+    else {
+        [self.expandedRowIndexPaths addObject:indexPath];
+    }
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

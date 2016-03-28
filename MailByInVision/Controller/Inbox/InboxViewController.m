@@ -59,7 +59,6 @@
 
 - (void)setupTableView {
     // UI customisation
-    self.tableView.contentInset = UIEdgeInsetsMake(-6, 0, 0, 0);
     self.tableView.separatorColor = [UIColor applicationSeparatorLineColor];
     self.tableView.separatorInset = UIEdgeInsetsZero;
     self.tableView.preservesSuperviewLayoutMargins = NO;

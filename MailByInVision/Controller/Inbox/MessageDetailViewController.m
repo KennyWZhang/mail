@@ -75,7 +75,7 @@
     UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"message-download-button"] style:UIBarButtonItemStylePlain target:nil action:nil];
     UIBarButtonItem *trashButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"message-trash-button"] style:UIBarButtonItemStylePlain target:nil action:nil];
     UIBarButtonItem *moreButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"message-more-button"] style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.rightBarButtonItems = @[downloadButton, trashButton, moreButton];
+    self.navigationItem.rightBarButtonItems = @[moreButton, trashButton, downloadButton];
 }
 
 - (void)setupHeaderAndFooterViews {
@@ -86,7 +86,7 @@
     if (self.message.attachmentURLString) {
         // For demo purposes using only single attachment, hence no `Attachment` object. Otherwise the footer view should contain a table view of its own.
         self.attachmentFooterView.numberOfAttachmentsLabel.text = @"1 Attachment";
-        self.attachmentFooterView.attachmentFilenameLabel.text = self.message.attachmentName;
+        [self.attachmentFooterView.attachmentFilenameButton setTitle:self.message.attachmentName forState:UIControlStateNormal];
     }
     else {
         self.tableView.tableFooterView = nil;

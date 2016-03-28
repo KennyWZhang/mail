@@ -21,4 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *receivedAtLabel;
 @property (weak, nonatomic) IBOutlet UIButton *expandedReplyButton;
 
+@property (nonatomic, getter = isExpanded) BOOL expanded;
+
 @end

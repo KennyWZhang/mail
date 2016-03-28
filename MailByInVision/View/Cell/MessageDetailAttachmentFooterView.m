@@ -15,7 +15,7 @@
     [super awakeFromNib];
     
     self.numberOfAttachmentsLabel.textColor = [UIColor applicationUnreadLabelColor];
-    self.attachmentFilenameLabel.textColor = [UIColor applicationBlueColor];
+    self.attachmentFilenameButton.titleLabel.textColor = [UIColor applicationBlueColor];
 }
 
 @end

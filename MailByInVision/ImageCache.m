@@ -31,7 +31,7 @@
 - (UIImage *)imageCachedFromURL:(NSURL *)URL {
     
     UIImage *cachedImage = [self objectForKey:URL.absoluteString.MD5];
-#ifdef DEBUG
+#ifdef DEBUG_CACHE
     if (cachedImage != nil) {
         NSLog(@"Getting image from cache for URL %@", URL.absoluteString);
     }
@@ -41,7 +41,11 @@
     if (cachedImage == nil) {
         NSData *imageData = [NSData dataWithContentsOfURL:URL];
         cachedImage = [UIImage imageWithData:imageData];
-        
+#ifdef DEBUG_CACHE
+        if (cachedImage == nil) {
+            NSLog(@"Image not loaded from URL %@", URL.absoluteString);
+        }
+#endif
         if (cachedImage) {
             [self addImage:cachedImage withURL:URL];
         }
@@ -51,7 +55,7 @@
 }
 
 - (void)addImage:(UIImage *)image withURL:(NSURL *)URL {
-#ifdef DEBUG
+#ifdef DEBUG_CACHE
     NSLog(@"Adding image to cache from URL %@", URL.absoluteString);
 #endif
     [self setObject:image forKey:URL.absoluteString.MD5];

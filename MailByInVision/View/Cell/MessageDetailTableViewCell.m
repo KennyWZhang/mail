@@ -19,10 +19,7 @@
     [super awakeFromNib];
     
     // Hide labels in expanded state as default
-    self.expandedToLabel.hidden = YES;
-    self.expandedReceivedAtLabel.hidden = YES;
-    self.expandedBodyLabel.hidden = YES;
-    self.expandedReplyButton.hidden = YES;
+    self.expanded = NO;
     
     // Rounded avatar image
     self.avatarImageView.layer.cornerRadius = CGRectGetHeight(self.avatarImageView.bounds) / 2;
@@ -34,6 +31,38 @@
     self.expandedToLabel.textColor = [UIColor applicationLightGrayTextColor];
     self.expandedReceivedAtLabel.textColor = [UIColor applicationLightGrayTextColor];
     self.expandedBodyLabel.textColor = [UIColor applicationReadLabelColor];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    [self.contentView setNeedsLayout];
+    [self.contentView layoutIfNeeded];
+    
+    self.expandedBodyLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.expandedBodyLabel.frame);
+}
+
+- (void)setExpanded:(BOOL)expanded {
+    _expanded = expanded;
+    
+    if (expanded) {
+        // expand cell
+        self.expandedToLabel.hidden = NO;
+        self.expandedReceivedAtLabel.hidden = NO;
+        self.expandedBodyLabel.hidden = NO;
+        self.expandedReplyButton.hidden = NO;
+        self.receivedAtLabel.hidden = YES;
+        self.bodyLabel.hidden = YES;
+    }
+    else {
+        // collapse cell
+        self.expandedToLabel.hidden = YES;
+        self.expandedReceivedAtLabel.hidden = YES;
+        self.expandedBodyLabel.hidden = YES;
+        self.expandedReplyButton.hidden = YES;
+        self.receivedAtLabel.hidden = NO;
+        self.bodyLabel.hidden = NO;
+    }
 }
 
 #pragma mark - Configurable Cell
