@@ -14,11 +14,11 @@
 
 @implementation Message
 
-- (NSAttributedString *)formattedFromText {
+- (NSAttributedString *)formattedFromTextWithPrefix:(BOOL)prefix {
     NSString *text = @"";
     NSString *threadPrefixText = @"me, ";
     
-    if (self.threadID) {
+    if (prefix && self.threadID) {
         text = threadPrefixText;
     }
     
@@ -27,17 +27,36 @@
     // Format text color based on message attributes
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
     if (self.read) {
-        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationReadLabel] range:NSMakeRange(0, text.length - 1)];
+        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationReadLabelColor] range:NSMakeRange(0, text.length)];
     }
     else {
-        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationUnreadLabel] range:NSMakeRange(0, text.length - 1)];
+        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationUnreadLabelColor] range:NSMakeRange(0, text.length)];
     }
     
-    if (self.threadID) {
-        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationReadLabel] range:NSMakeRange(0, threadPrefixText.length)];
+    if (prefix && self.threadID) {
+        [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor applicationReadLabelColor] range:NSMakeRange(0, threadPrefixText.length)];
     }
     
     return attributedText;
+}
+
+- (NSString *)formattedToText {
+    // For demo application using only random "to" contact
+    Contact *aContact = (Contact *)self.to.anyObject;
+    NSString *firstname = aContact.firstname;
+    NSString *lastname = aContact.lastname;
+    
+    if (firstname && lastname) {
+        return [NSString stringWithFormat:@"%@ %@", firstname, lastname];
+    }
+    else if (firstname) {
+        return firstname;
+    }
+    else if (lastname) {
+        return lastname;
+    }
+    
+    return @"me";
 }
 
 @end

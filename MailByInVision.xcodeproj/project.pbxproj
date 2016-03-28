@@ -14,6 +14,15 @@
 		500C97B21CA5E29E0021FDAC /* InboxDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97B11CA5E29E0021FDAC /* InboxDataSource.m */; };
 		500C97B81CA5ED310021FDAC /* InboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */; };
 		500C97BD1CA82DFB0021FDAC /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97BC1CA82DFB0021FDAC /* NSDate+Utils.m */; };
+		500C97C01CA858040021FDAC /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97BF1CA858040021FDAC /* MessageDetailViewController.m */; };
+		500C97C31CA860180021FDAC /* MessageDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97C21CA860180021FDAC /* MessageDetailTableViewCell.m */; };
+		500C97CC1CA8619B0021FDAC /* MessageDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97CB1CA8619B0021FDAC /* MessageDetailHeaderView.m */; };
+		500C97CF1CA861AA0021FDAC /* MessageDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97CE1CA861AA0021FDAC /* MessageDetailBottomView.m */; };
+		500C97D21CA863D60021FDAC /* SeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97D11CA863D60021FDAC /* SeparatorLine.m */; };
+		500C97D51CA87DE40021FDAC /* MessageDetailAttachmentFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97D41CA87DE40021FDAC /* MessageDetailAttachmentFooterView.m */; };
+		500C97D81CA880EE0021FDAC /* MessageDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97D71CA880EE0021FDAC /* MessageDetailDataSource.m */; };
+		500C97DE1CA891610021FDAC /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97DD1CA891610021FDAC /* ImageCache.m */; };
+		500C97E11CA891BC0021FDAC /* NSString+Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 500C97E01CA891BC0021FDAC /* NSString+Crypto.m */; };
 		504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */; };
 		504DB8341C9F119000A76D61 /* Mark.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8221C9F119000A76D61 /* Mark.m */; };
 		504DB8351C9F119000A76D61 /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8241C9F119000A76D61 /* Group+CoreDataProperties.m */; };
@@ -89,6 +98,24 @@
 		500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxTableViewCell.m; sourceTree = "<group>"; };
 		500C97BB1CA82DFB0021FDAC /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
 		500C97BC1CA82DFB0021FDAC /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
+		500C97BE1CA858040021FDAC /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
+		500C97BF1CA858040021FDAC /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
+		500C97C11CA860180021FDAC /* MessageDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailTableViewCell.h; sourceTree = "<group>"; };
+		500C97C21CA860180021FDAC /* MessageDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailTableViewCell.m; sourceTree = "<group>"; };
+		500C97CA1CA8619B0021FDAC /* MessageDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailHeaderView.h; sourceTree = "<group>"; };
+		500C97CB1CA8619B0021FDAC /* MessageDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailHeaderView.m; sourceTree = "<group>"; };
+		500C97CD1CA861AA0021FDAC /* MessageDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailBottomView.h; sourceTree = "<group>"; };
+		500C97CE1CA861AA0021FDAC /* MessageDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailBottomView.m; sourceTree = "<group>"; };
+		500C97D01CA863D60021FDAC /* SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorLine.h; sourceTree = "<group>"; };
+		500C97D11CA863D60021FDAC /* SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorLine.m; sourceTree = "<group>"; };
+		500C97D31CA87DE40021FDAC /* MessageDetailAttachmentFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailAttachmentFooterView.h; sourceTree = "<group>"; };
+		500C97D41CA87DE40021FDAC /* MessageDetailAttachmentFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailAttachmentFooterView.m; sourceTree = "<group>"; };
+		500C97D61CA880EE0021FDAC /* MessageDetailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailDataSource.h; sourceTree = "<group>"; };
+		500C97D71CA880EE0021FDAC /* MessageDetailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailDataSource.m; sourceTree = "<group>"; };
+		500C97DC1CA891610021FDAC /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		500C97DD1CA891610021FDAC /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		500C97DF1CA891BC0021FDAC /* NSString+Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Crypto.h"; sourceTree = "<group>"; };
+		500C97E01CA891BC0021FDAC /* NSString+Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Crypto.m"; sourceTree = "<group>"; };
 		504DB81F1C9F119000A76D61 /* Mark+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mark+CoreDataProperties.h"; sourceTree = "<group>"; };
 		504DB8201C9F119000A76D61 /* Mark+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Mark+CoreDataProperties.m"; sourceTree = "<group>"; };
 		504DB8211C9F119000A76D61 /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mark.h; sourceTree = "<group>"; };
@@ -223,6 +250,24 @@
 			path = "Date Source & Provider";
 			sourceTree = "<group>";
 		};
+		500C97D91CA8911E0021FDAC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				500C97DB1CA891460021FDAC /* Image Cache */,
+				508391F81C988DF5003514EF /* Core Data */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		500C97DB1CA891460021FDAC /* Image Cache */ = {
+			isa = PBXGroup;
+			children = (
+				500C97DC1CA891610021FDAC /* ImageCache.h */,
+				500C97DD1CA891610021FDAC /* ImageCache.m */,
+			);
+			name = "Image Cache";
+			sourceTree = "<group>";
+		};
 		508391C51C98667D003514EF = {
 			isa = PBXGroup;
 			children = (
@@ -244,9 +289,9 @@
 		508391D01C98667E003514EF /* MailByInVision */ = {
 			isa = PBXGroup;
 			children = (
+				500C97D91CA8911E0021FDAC /* Utility */,
 				50AFC4771C9ABCFE00434DCC /* Appearance */,
 				50AFC47B1C9ABDC800434DCC /* Categories */,
-				508391F81C988DF5003514EF /* Core Data */,
 				508391F31C988146003514EF /* Network Service */,
 				508391F01C98812E003514EF /* Model */,
 				508391F21C98813A003514EF /* View */,
@@ -297,6 +342,8 @@
 				500C97B41CA5EAB30021FDAC /* ConfigurableCell.h */,
 				50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */,
 				50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */,
+				500C97D01CA863D60021FDAC /* SeparatorLine.h */,
+				500C97D11CA863D60021FDAC /* SeparatorLine.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +496,8 @@
 				50AFC4A81C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m */,
 				504DB8521CA088B400A76D61 /* UIViewController+CoreDataStack.h */,
 				504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */,
+				500C97DF1CA891BC0021FDAC /* NSString+Crypto.h */,
+				500C97E01CA891BC0021FDAC /* NSString+Crypto.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -460,6 +509,14 @@
 				500C97B71CA5ED310021FDAC /* InboxTableViewCell.m */,
 				50AFC4871C9AD48800434DCC /* MenuTableViewCell.h */,
 				50AFC4881C9AD48800434DCC /* MenuTableViewCell.m */,
+				500C97D31CA87DE40021FDAC /* MessageDetailAttachmentFooterView.h */,
+				500C97D41CA87DE40021FDAC /* MessageDetailAttachmentFooterView.m */,
+				500C97CD1CA861AA0021FDAC /* MessageDetailBottomView.h */,
+				500C97CE1CA861AA0021FDAC /* MessageDetailBottomView.m */,
+				500C97CA1CA8619B0021FDAC /* MessageDetailHeaderView.h */,
+				500C97CB1CA8619B0021FDAC /* MessageDetailHeaderView.m */,
+				500C97C11CA860180021FDAC /* MessageDetailTableViewCell.h */,
+				500C97C21CA860180021FDAC /* MessageDetailTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -482,6 +539,10 @@
 				500C97B11CA5E29E0021FDAC /* InboxDataSource.m */,
 				508391FF1C998D80003514EF /* InboxViewController.h */,
 				508392001C998D80003514EF /* InboxViewController.m */,
+				500C97BE1CA858040021FDAC /* MessageDetailViewController.h */,
+				500C97BF1CA858040021FDAC /* MessageDetailViewController.m */,
+				500C97D61CA880EE0021FDAC /* MessageDetailDataSource.h */,
+				500C97D71CA880EE0021FDAC /* MessageDetailDataSource.m */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -669,6 +730,7 @@
 				50AFC4A61C9B25D300434DCC /* MenuSectionHeaderView.m in Sources */,
 				50938CF31CA345E4009F6F51 /* StringToNumberMapper.m in Sources */,
 				50938CF81CA345E4009F6F51 /* ChainMapper.m in Sources */,
+				500C97D21CA863D60021FDAC /* SeparatorLine.m in Sources */,
 				500C97B21CA5E29E0021FDAC /* InboxDataSource.m in Sources */,
 				504DB8471CA021FA00A76D61 /* MessageService.m in Sources */,
 				508391FE1C998C47003514EF /* MainContainerViewController.m in Sources */,
@@ -682,6 +744,7 @@
 				50938D071CA3D65E009F6F51 /* NSString+Emptiness.m in Sources */,
 				504DB83C1C9F119000A76D61 /* Message.m in Sources */,
 				508391D31C98667E003514EF /* main.m in Sources */,
+				500C97CC1CA8619B0021FDAC /* MessageDetailHeaderView.m in Sources */,
 				500C97BD1CA82DFB0021FDAC /* NSDate+Utils.m in Sources */,
 				508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */,
 				504DB83B1C9F119000A76D61 /* Message+CoreDataProperties.m in Sources */,
@@ -691,8 +754,11 @@
 				504DB8341C9F119000A76D61 /* Mark.m in Sources */,
 				50AFC49C1C9AEE3D00434DCC /* UITableViewCell+ReuseIdentifier.m in Sources */,
 				50938CF21CA345E4009F6F51 /* Mapper.m in Sources */,
+				500C97CF1CA861AA0021FDAC /* MessageDetailBottomView.m in Sources */,
 				500C97AF1CA5D9670021FDAC /* DataProviderUpdate.m in Sources */,
+				500C97DE1CA891610021FDAC /* ImageCache.m in Sources */,
 				500C97A91CA5D2B10021FDAC /* FetchedResultsDataProvider.m in Sources */,
+				500C97C01CA858040021FDAC /* MessageDetailViewController.m in Sources */,
 				504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
 				50AFC4B91C9C0A9400434DCC /* UINavigationBar+CustomHeight.m in Sources */,
@@ -701,6 +767,7 @@
 				50938CF41CA345E4009F6F51 /* ManagedObjectMapper.m in Sources */,
 				508392011C998D80003514EF /* InboxViewController.m in Sources */,
 				504DB8391C9F119000A76D61 /* Contact+CoreDataProperties.m in Sources */,
+				500C97E11CA891BC0021FDAC /* NSString+Crypto.m in Sources */,
 				500C97B81CA5ED310021FDAC /* InboxTableViewCell.m in Sources */,
 				5083920C1C999FD3003514EF /* ContentNavigationController.m in Sources */,
 				504DB8361C9F119000A76D61 /* Group.m in Sources */,
@@ -709,14 +776,17 @@
 				50AFC4A91C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m in Sources */,
 				50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */,
 				504DB84D1CA06C0E00A76D61 /* NSDictionary+Parsing.m in Sources */,
+				500C97C31CA860180021FDAC /* MessageDetailTableViewCell.m in Sources */,
 				50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */,
 				504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */,
 				50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */,
 				50AFC48D1C9AE65A00434DCC /* MenuDataSource.m in Sources */,
+				500C97D51CA87DE40021FDAC /* MessageDetailAttachmentFooterView.m in Sources */,
 				500C97A21CA49E470021FDAC /* ContactParser.m in Sources */,
 				50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */,
 				504DB8421C9FF70B00A76D61 /* APIClient.m in Sources */,
 				50938CF61CA345E4009F6F51 /* ErrorIfMapper.m in Sources */,
+				500C97D81CA880EE0021FDAC /* MessageDetailDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

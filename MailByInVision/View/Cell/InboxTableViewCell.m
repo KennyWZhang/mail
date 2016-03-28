@@ -16,14 +16,25 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.fromLabel.textColor = [UIColor applicationUnreadLabel];
-    self.subjectLabel.textColor = [UIColor applicationUnreadLabel];
-    self.bodyLabel.textColor = [UIColor applicationReadLabel];
-    self.receivedAtLabel.textColor = [UIColor applicationBlue];
+    self.fromLabel.textColor = [UIColor applicationUnreadLabelColor];
+    self.subjectLabel.textColor = [UIColor applicationUnreadLabelColor];
+    self.bodyLabel.textColor = [UIColor applicationReadLabelColor];
+    self.receivedAtLabel.textColor = [UIColor applicationBlueColor];
 }
 
+#pragma mark - Private
+
+- (void)setupColorsWithMessage:(Message *)message {
+    UIColor *resultColor = message.read.boolValue ? [UIColor applicationReadLabelColor] : [UIColor applicationUnreadLabelColor];
+    self.receivedAtLabel.textColor = message.read.boolValue ? [UIColor applicationLightGrayTextColor] : [UIColor applicationBlueColor];
+    self.fromLabel.textColor = resultColor;
+    self.subjectLabel.textColor = resultColor;
+}
+
+#pragma mark - Configurable Cell
+
 - (void)configureForObject:(Message *)message {
-    self.fromLabel.attributedText = [message formattedFromText];
+    self.fromLabel.attributedText = [message formattedFromTextWithPrefix:YES];
     self.subjectLabel.text = message.subject;
     self.bodyLabel.text = message.body;
     self.unreadIcon.hidden = message.read.boolValue;
@@ -35,14 +46,6 @@
     }
     
     [self setupColorsWithMessage:message];
-}
-
-#pragma mark - Private
-
-- (void)setupColorsWithMessage:(Message *)message {
-    UIColor *resultColor = message.read.boolValue ? [UIColor applicationReadLabel] : [UIColor applicationUnreadLabel];
-    self.fromLabel.textColor = resultColor;
-    self.subjectLabel.textColor = resultColor;
 }
 
 @end

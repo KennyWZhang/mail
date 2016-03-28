@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Message : NSManagedObject
 
-- (NSAttributedString *)formattedFromText;
+- (NSAttributedString *)formattedFromTextWithPrefix:(BOOL)prefix;
+- (NSString *)formattedToText;
 
 @end
 

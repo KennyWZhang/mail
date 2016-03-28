@@ -14,4 +14,7 @@
 
 - (NSString *)cellIdentifierForObject:(NSManagedObject *)object;
 
+@optional
+- (void)didSelectRowWithObject:(NSManagedObject *)object;
+
 @end

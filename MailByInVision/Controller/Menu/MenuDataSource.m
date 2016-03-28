@@ -67,7 +67,7 @@ const NSInteger NumberOfRowsInMarkedSection = 4;
         return _demoMarkedColors;
     }
     
-    _demoMarkedColors = @[[UIColor applicationMenuMarked1], [UIColor applicationMenuMarked2], [UIColor applicationMenuMarked3], [UIColor applicationMenuMarked4]];
+    _demoMarkedColors = @[[UIColor applicationMenuMarked1Color], [UIColor applicationMenuMarked2Color], [UIColor applicationMenuMarked3Color], [UIColor applicationMenuMarked4Color]];
     
     return _demoMarkedColors;
 }

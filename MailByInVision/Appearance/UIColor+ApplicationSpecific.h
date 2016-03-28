@@ -10,6 +10,11 @@
 
 @interface UIColor (ApplicationSpecific)
 
++ (UIColor *)applicationSeparatorLineColor;
++ (UIColor *)applicationLightGrayTextColor;
++ (UIColor *)applicationGrayTextColor;
++ (UIColor *)applicationLightGrayBackgroundColor;
+
 + (UIColor *)applicationMenuSectionColor;
 + (UIColor *)applicationMenuCellColor;
 + (UIColor *)applicationMenuCellSelectedColor;
@@ -18,13 +23,13 @@
 + (UIColor *)applicationMenuSectionTextColor;
 + (UIColor *)applicationMenuCellTextColor;
 
-+ (UIColor *)applicationMenuMarked1;
-+ (UIColor *)applicationMenuMarked2;
-+ (UIColor *)applicationMenuMarked3;
-+ (UIColor *)applicationMenuMarked4;
++ (UIColor *)applicationMenuMarked1Color;
++ (UIColor *)applicationMenuMarked2Color;
++ (UIColor *)applicationMenuMarked3Color;
++ (UIColor *)applicationMenuMarked4Color;
 
-+ (UIColor *)applicationBlue;
-+ (UIColor *)applicationUnreadLabel;
-+ (UIColor *)applicationReadLabel;
++ (UIColor *)applicationBlueColor;
++ (UIColor *)applicationUnreadLabelColor;
++ (UIColor *)applicationReadLabelColor;
 
 @end

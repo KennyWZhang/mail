@@ -1,29 +1,29 @@
 //
-//  InboxDataSource.m
+//  MessageDetailDataSource.m
 //  MailByInVision
 //
-//  Created by Michal Kalis on 25/03/16.
+//  Created by Michal Kalis on 27/03/16.
 //  Copyright © 2016 Michal Kalis. All rights reserved.
 //
 
-#import "InboxDataSource.h"
+#import "MessageDetailDataSource.h"
 #import "FetchedResultsDataProvider.h"
 #import "DataProviderUpdate.h"
 #import "ConfigurableCell.h"
 #import "DataProvider.h"
 #import "Message.h"
-#import "InboxTableViewCell.h"
+#import "MessageDetailTableViewCell.h"
 
 @import UIKit;
 
-@interface InboxDataSource () <UITableViewDataSource, UITableViewDelegate>
+@interface MessageDetailDataSource () <UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) FetchedResultsDataProvider *dataProvider;
 
 @end
 
-@implementation InboxDataSource
+@implementation MessageDetailDataSource
 
 - (instancetype)initWithTableView:(UITableView *)tableView dataProvider:(FetchedResultsDataProvider *)dataProvider delegate:(id<DataSourceDelegate>)delegate {
     if (self = [super init]) {
@@ -31,7 +31,6 @@
         self.dataProvider = dataProvider;
         self.delegate = delegate;
         
-        tableView.delegate = self;
         tableView.dataSource = self;
         [tableView reloadData];
     }
@@ -91,19 +90,11 @@
     Message *message = (Message *)[self.dataProvider objectAtIndexPath:indexPath];
     NSString *identifier = [self.delegate cellIdentifierForObject:message];
     
-    InboxTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    MessageDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     [cell configureForObject:message];
     
     return cell;
-}
-
-#pragma mark - Table View Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.delegate respondsToSelector:@selector(didSelectRowWithObject:)]) {
-        [self.delegate didSelectRowWithObject:[self.dataProvider objectAtIndexPath:indexPath]];
-    }
 }
 
 @end

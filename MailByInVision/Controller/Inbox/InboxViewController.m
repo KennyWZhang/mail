@@ -16,6 +16,8 @@
 #import "DataSourceDelegate.h"
 #import "InboxTableViewCell.h"
 #import "UITableViewCell+ReuseIdentifier.h"
+#import "MessageDetailViewController.h"
+#import "UIColor+ApplicationSpecific.h"
 
 @interface InboxViewController () <DataProviderDelegate, DataSourceDelegate>
 
@@ -38,6 +40,16 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // Unselect the selected row if any
+    NSIndexPath *selection = self.tableView.indexPathForSelectedRow;
+    if (selection) {
+        [self.tableView deselectRowAtIndexPath:selection animated:YES];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -46,6 +58,14 @@
 #pragma mark - Private
 
 - (void)setupTableView {
+    // UI customisation
+    self.tableView.contentInset = UIEdgeInsetsMake(-6, 0, 0, 0);
+    self.tableView.separatorColor = [UIColor applicationSeparatorLineColor];
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.preservesSuperviewLayoutMargins = NO;
+    self.tableView.layoutMargins = UIEdgeInsetsZero;
+    
+    // Data provider & data source
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[Message entityName]];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"receivedAt" ascending:false]];
     // Fetch only message that are not part of a thread or only the newest message in a thread
@@ -69,6 +89,15 @@
 
 - (void)dataProviderDidUpdateWithUpdates:(NSArray<DataProviderUpdate *> *)updates {
     [self.dataSource processUpdates:updates];
+}
+
+- (void)didSelectRowWithObject:(NSManagedObject *)object {
+    MessageDetailViewController *controller = [[UIStoryboard storyboardWithName:@"Inbox" bundle:nil] instantiateViewControllerWithIdentifier:@"MessageDetailViewController"];
+    
+    controller.message = (Message *)object;
+    controller.coreDataStack = self.coreDataStack;
+    
+    [self.navigationController pushViewController:controller animated:true];
 }
 
 @end

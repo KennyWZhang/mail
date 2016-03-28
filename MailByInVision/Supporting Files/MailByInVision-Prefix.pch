@@ -9,6 +9,10 @@
 #ifndef MailByInVision_Prefix_pch
 #define MailByInVision_Prefix_pch
 
+// Date & time
+#define INVISION_HOURS(seconds) (double)(seconds/60.0/60.0)
+#define INVISION_MINUTES(seconds) (seconds/60)
+
 // Device specific macros
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

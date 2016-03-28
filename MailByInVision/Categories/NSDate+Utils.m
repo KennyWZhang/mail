@@ -39,7 +39,18 @@ static NSCalendar *calendar;
     }
     
     if ([self isToday]) {
-        return [NSString stringWithFormat:@"%@", [self stringFromDateWithFormat:@"HH:mm"]];
+        NSInteger secondsDiff = -1 * [self timeIntervalSinceNow];
+        NSInteger minutesDiff = INVISION_MINUTES(secondsDiff);
+        NSInteger hoursDiff = INVISION_HOURS(secondsDiff);
+        
+        if (hoursDiff < 1) {
+            if (minutesDiff < 1) {
+                if (secondsDiff < 0) secondsDiff = 0;
+                return [NSString stringWithFormat:@"%ld %@ Ago", (long)secondsDiff, secondsDiff > 1 ? @"seconds" : @"second"];
+            }
+            return [NSString stringWithFormat:@"%ld %@ Ago", (long)minutesDiff, minutesDiff > 1 ? @"minutes" : @"minute"];
+        }
+        return [self stringFromDateWithFormat:@"HH:mm"];
     } else if ([self isYesterday]) {
         return @"Yesterday";
     }
