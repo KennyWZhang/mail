@@ -40,7 +40,7 @@
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self.viewControllers.firstObject) {
         // Poping back to the root
-        if (self.presentingViewController == nil) {
+        if (IS_IPHONE && self.presentingViewController == nil) {
             // Custom bar button item
             UIImage *image = [[UIImage imageNamed:@"menu-button-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(toggleMenu:)];
@@ -52,7 +52,9 @@
     }
     else {
         // Push
-        viewController.navigationItem.leftBarButtonItems = @[];
+        if (IS_IPHONE) {
+            viewController.navigationItem.leftBarButtonItems = @[];
+        }
     }
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5oG-bd-LPO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5oG-bd-LPO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -31,7 +31,6 @@
                     <view key="view" contentMode="scaleToFill" id="EUA-E8-VHB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.74360462900000002" blue="0.4171657453" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="rQh-Vr-AUe"/>
                 </viewController>
@@ -45,9 +44,6 @@
                 <splitViewController id="5oG-bd-LPO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <segue destination="WaC-kv-7tc" kind="relationship" relationship="masterViewController" id="5UV-2k-EYl"/>
-                    </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOE-0d-YAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

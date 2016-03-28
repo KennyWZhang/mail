@@ -46,11 +46,12 @@
             
             self.splitController = [[CustomSplitController alloc] init];
             self.splitController.splitViewController = splitViewController;
+            self.splitController.masterViewController = [[UIStoryboard storyboardWithName:@"Menu" bundle:nil] instantiateInitialViewController];
             self.splitController.detailViewController = [[UIStoryboard storyboardWithName:@"Inbox" bundle:nil] instantiateInitialViewController];
             splitViewController.delegate = self.splitController;
             
             // Pass the `CoreDataStack` instance to initial controller
-            self.contentController.coreDataStack = self.coreDataStack;
+            ((UINavigationController *)self.splitController.detailViewController).topViewController.coreDataStack = self.coreDataStack;
             
             controller = self.contentController;
         }

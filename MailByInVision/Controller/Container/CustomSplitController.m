@@ -17,6 +17,10 @@
 
 @implementation CustomSplitController
 
+- (void)setMasterViewController:(UIViewController *)masterViewController {
+    self.splitViewController.viewControllers = @[masterViewController];
+}
+
 - (void)setDetailViewController:(ContentNavigationController *)detailViewController {
     if (self.splitViewController.viewControllers.count == 2 && [self.splitViewController.viewControllers[1] isKindOfClass:[ContentNavigationController class]]) {
         // for content view controller copy the left buttons because of the "menu" button in portrait mode

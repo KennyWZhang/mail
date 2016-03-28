@@ -54,11 +54,6 @@
 
 #pragma mark - Auxiliary
 
-- (void)customizeAppearance {
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor applicationUnreadLabelColor], NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:17.0f]}];
-}
-
 - (void)completeUserInterface {
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
@@ -74,6 +69,11 @@
     [window addBlackStatusBarView];
     
     self.transitionService.window = window;
+}
+
+- (void)customizeAppearance {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation-bar-background"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor applicationUnreadLabelColor], NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:17.0f]}];
 }
 
 @end

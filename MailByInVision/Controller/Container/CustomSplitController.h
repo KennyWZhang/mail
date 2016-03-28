@@ -17,6 +17,8 @@
  */
 @property (weak, nonatomic) UIViewController *detailViewController;
 
+@property (weak, nonatomic) UIViewController *masterViewController;
+
 - (void)dismissMasterAnimated:(BOOL)animated;
 
 @end
