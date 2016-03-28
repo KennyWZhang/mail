@@ -155,10 +155,18 @@
 - (IBAction)textFieldEditingDidEnd:(UITextField *)sender {
     self.searchIcon.image = [UIImage imageNamed:@"inbox-search-icon"];
     [self cancelSearch];
+    
+    self.searchContainerView.layer.masksToBounds = YES;
 }
 
 - (IBAction)textFieldEditingDidBegin:(UITextField *)sender {
     self.searchIcon.image = [UIImage imageNamed:@"inbox-search-icon-active"];
+    
+    self.searchContainerView.layer.masksToBounds = NO;
+    self.searchContainerView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.searchContainerView.layer.shadowOffset = CGSizeMake(0, 1);
+    self.searchContainerView.layer.shadowRadius = 2;
+    self.searchContainerView.layer.shadowOpacity = 0.3;
 }
 
 - (void)cancelSearch {
