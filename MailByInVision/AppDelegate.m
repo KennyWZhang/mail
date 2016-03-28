@@ -13,11 +13,12 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "MainContainerViewController.h"
 #import "UIViewController+CoreDataStack.h"
+#import "ScreenTransitionService.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
-@property (nonatomic, strong) UIViewController *contentController;
-@property (nonatomic, strong) CustomSplitController *splitController;
+@property (nonatomic, strong) ScreenTransitionService *transitionService;
 
 @property (strong, readwrite) CoreDataStack *coreDataStack;
 - (void)completeUserInterface;
@@ -61,33 +62,16 @@
     
     WindowWithStatusBar *window = [[WindowWithStatusBar alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    if (IS_IPAD) {
-        self.contentController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil] instantiateInitialViewController];
-        UISplitViewController *splitViewController = (UISplitViewController *)self.contentController;
-        
-        self.splitController = [[CustomSplitController alloc] init];
-        self.splitController.splitViewController = splitViewController;
-        self.splitController.detailViewController = [[UIStoryboard storyboardWithName:@"Inbox" bundle:nil] instantiateInitialViewController];
-        splitViewController.delegate = self.splitController;
-        
-        window.rootViewController = self.contentController;
-        
-#warning TODO add mainContext to controller
-    }
-    else {
-        MainContainerViewController *controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-        
-        // Pass the `CoreDataStack` instance to initial controller
-        controller.coreDataStack = self.coreDataStack;
-        
-        window.rootViewController = controller;
-    }
+    self.transitionService = [[ScreenTransitionService alloc] initWithCoreDataStack:self.coreDataStack];
+    window.rootViewController = [self.transitionService getContentViewController];
     
     [window makeKeyAndVisible];
     self.window = window;
     
     // After the whole view hierarchy and `rootViewController` are setup, add the global black status bar
     [window addBlackStatusBarView];
+    
+    self.transitionService.window = window;
 }
 
 @end

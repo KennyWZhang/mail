@@ -39,6 +39,11 @@
 		504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */; };
 		504DB8541CA088B400A76D61 /* UIViewController+CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */; };
 		50596DFE1CA96E2500DD69B8 /* SearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50596DFD1CA96E2500DD69B8 /* SearchTextField.m */; };
+		50596E031CA975D000DD69B8 /* ScreenTransitionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 50596E021CA975D000DD69B8 /* ScreenTransitionService.m */; };
+		50596E0A1CA97C6900DD69B8 /* DemoUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 50596E091CA97C6900DD69B8 /* DemoUserService.m */; };
+		50596E0E1CA97D6700DD69B8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50596E0D1CA97D6700DD69B8 /* LoginViewController.m */; };
+		50596E101CA9808700DD69B8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50596E0F1CA9808700DD69B8 /* Login.storyboard */; };
+		50596E131CA9882700DD69B8 /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50596E121CA9882700DD69B8 /* LoginTextField.m */; };
 		508391D31C98667E003514EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D21C98667E003514EF /* main.m */; };
 		508391D61C98667E003514EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508391D51C98667E003514EF /* AppDelegate.m */; };
 		508391D91C98667E003514EF /* MailByInVision.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 508391D71C98667E003514EF /* MailByInVision.xcdatamodeld */; };
@@ -150,6 +155,15 @@
 		504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CoreDataStack.m"; sourceTree = "<group>"; };
 		50596DFC1CA96E2500DD69B8 /* SearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTextField.h; sourceTree = "<group>"; };
 		50596DFD1CA96E2500DD69B8 /* SearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTextField.m; sourceTree = "<group>"; };
+		50596E011CA975D000DD69B8 /* ScreenTransitionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenTransitionService.h; sourceTree = "<group>"; };
+		50596E021CA975D000DD69B8 /* ScreenTransitionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenTransitionService.m; sourceTree = "<group>"; };
+		50596E081CA97C6900DD69B8 /* DemoUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUserService.h; sourceTree = "<group>"; };
+		50596E091CA97C6900DD69B8 /* DemoUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUserService.m; sourceTree = "<group>"; };
+		50596E0C1CA97D6700DD69B8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		50596E0D1CA97D6700DD69B8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		50596E0F1CA9808700DD69B8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		50596E111CA9882700DD69B8 /* LoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTextField.h; sourceTree = "<group>"; };
+		50596E121CA9882700DD69B8 /* LoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTextField.m; sourceTree = "<group>"; };
 		508391CE1C98667E003514EF /* MailByInVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailByInVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508391D21C98667E003514EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		508391D41C98667E003514EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -274,6 +288,24 @@
 			name = "Image Cache";
 			sourceTree = "<group>";
 		};
+		50596DFF1CA975A900DD69B8 /* Network Service */ = {
+			isa = PBXGroup;
+			children = (
+				50938D001CA35563009F6F51 /* API */,
+				50938CDF1CA331E3009F6F51 /* Parser */,
+			);
+			name = "Network Service";
+			sourceTree = "<group>";
+		};
+		50596E0B1CA97D4A00DD69B8 /* Authorisation */ = {
+			isa = PBXGroup;
+			children = (
+				50596E0C1CA97D6700DD69B8 /* LoginViewController.h */,
+				50596E0D1CA97D6700DD69B8 /* LoginViewController.m */,
+			);
+			name = Authorisation;
+			sourceTree = "<group>";
+		};
 		508391C51C98667D003514EF = {
 			isa = PBXGroup;
 			children = (
@@ -298,7 +330,7 @@
 				500C97D91CA8911E0021FDAC /* Utility */,
 				50AFC4771C9ABCFE00434DCC /* Appearance */,
 				50AFC47B1C9ABDC800434DCC /* Categories */,
-				508391F31C988146003514EF /* Network Service */,
+				508391F31C988146003514EF /* Service */,
 				508391F01C98812E003514EF /* Model */,
 				508391F21C98813A003514EF /* View */,
 				508391F11C988132003514EF /* Controller */,
@@ -334,6 +366,7 @@
 			children = (
 				50AFC4911C9AE6A400434DCC /* Container */,
 				500C97A61CA5D2960021FDAC /* Date Source & Provider */,
+				50596E0B1CA97D4A00DD69B8 /* Authorisation */,
 				50AFC48F1C9AE66D00434DCC /* Inbox */,
 				50AFC48E1C9AE66800434DCC /* Menu */,
 			);
@@ -352,16 +385,22 @@
 				500C97D11CA863D60021FDAC /* SeparatorLine.m */,
 				50596DFC1CA96E2500DD69B8 /* SearchTextField.h */,
 				50596DFD1CA96E2500DD69B8 /* SearchTextField.m */,
+				50596E111CA9882700DD69B8 /* LoginTextField.h */,
+				50596E121CA9882700DD69B8 /* LoginTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		508391F31C988146003514EF /* Network Service */ = {
+		508391F31C988146003514EF /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				50938D001CA35563009F6F51 /* API */,
-				50938CDF1CA331E3009F6F51 /* Parser */,
+				50596DFF1CA975A900DD69B8 /* Network Service */,
+				50596E011CA975D000DD69B8 /* ScreenTransitionService.h */,
+				50596E021CA975D000DD69B8 /* ScreenTransitionService.m */,
+				50596E081CA97C6900DD69B8 /* DemoUserService.h */,
+				50596E091CA97C6900DD69B8 /* DemoUserService.m */,
 			);
+			name = Service;
 			path = "Network Service";
 			sourceTree = "<group>";
 		};
@@ -383,6 +422,7 @@
 				50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */,
 				508392051C998F02003514EF /* Menu.storyboard */,
 				50AFC4BA1C9D460D00434DCC /* Other.storyboard */,
+				50596E0F1CA9808700DD69B8 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -679,6 +719,7 @@
 				508391E21C98667E003514EF /* Inbox.storyboard in Resources */,
 				508392061C998F02003514EF /* Menu.storyboard in Resources */,
 				50AFC4AB1C9B309500434DCC /* MenuSectionHeaderView.xib in Resources */,
+				50596E101CA9808700DD69B8 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +811,7 @@
 				500C97AF1CA5D9670021FDAC /* DataProviderUpdate.m in Sources */,
 				500C97DE1CA891610021FDAC /* ImageCache.m in Sources */,
 				500C97A91CA5D2B10021FDAC /* FetchedResultsDataProvider.m in Sources */,
+				50596E0A1CA97C6900DD69B8 /* DemoUserService.m in Sources */,
 				500C97C01CA858040021FDAC /* MessageDetailViewController.m in Sources */,
 				504DB8501CA0812A00A76D61 /* NSManagedObject+CustomInit.m in Sources */,
 				508391FB1C988E10003514EF /* CoreDataStack.m in Sources */,
@@ -787,13 +829,16 @@
 				504DB8541CA088B400A76D61 /* UIViewController+CoreDataStack.m in Sources */,
 				50AFC4A91C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m in Sources */,
 				50AFC4741C9AB0A000434DCC /* CustomSplitController.m in Sources */,
+				50596E131CA9882700DD69B8 /* LoginTextField.m in Sources */,
 				504DB84D1CA06C0E00A76D61 /* NSDictionary+Parsing.m in Sources */,
 				500C97C31CA860180021FDAC /* MessageDetailTableViewCell.m in Sources */,
 				50AFC4B61C9B677500434DCC /* UIImageView+RoundedRectangle.m in Sources */,
+				50596E0E1CA97D6700DD69B8 /* LoginViewController.m in Sources */,
 				504DB8331C9F119000A76D61 /* Mark+CoreDataProperties.m in Sources */,
 				50AFC4C11C9D51AB00434DCC /* WindowWithStatusBar.m in Sources */,
 				50AFC48D1C9AE65A00434DCC /* MenuDataSource.m in Sources */,
 				500C97D51CA87DE40021FDAC /* MessageDetailAttachmentFooterView.m in Sources */,
+				50596E031CA975D000DD69B8 /* ScreenTransitionService.m in Sources */,
 				500C97A21CA49E470021FDAC /* ContactParser.m in Sources */,
 				50AFC4B31C9B659100434DCC /* UIImage+TemplateImage.m in Sources */,
 				504DB8421C9FF70B00A76D61 /* APIClient.m in Sources */,
