@@ -273,10 +273,10 @@
 		500C97D91CA8911E0021FDAC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				500C97DB1CA891460021FDAC /* Image Cache */,
 				508391F81C988DF5003514EF /* Core Data */,
+				500C97DB1CA891460021FDAC /* Image Cache */,
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		500C97DB1CA891460021FDAC /* Image Cache */ = {
@@ -285,7 +285,7 @@
 				500C97DC1CA891610021FDAC /* ImageCache.h */,
 				500C97DD1CA891610021FDAC /* ImageCache.m */,
 			);
-			name = "Image Cache";
+			path = "Image Cache";
 			sourceTree = "<group>";
 		};
 		50596DFF1CA975A900DD69B8 /* Network Service */ = {
@@ -294,7 +294,7 @@
 				50938D001CA35563009F6F51 /* API */,
 				50938CDF1CA331E3009F6F51 /* Parser */,
 			);
-			name = "Network Service";
+			path = "Network Service";
 			sourceTree = "<group>";
 		};
 		50596E0B1CA97D4A00DD69B8 /* Authorisation */ = {
@@ -303,7 +303,7 @@
 				50596E0C1CA97D6700DD69B8 /* LoginViewController.h */,
 				50596E0D1CA97D6700DD69B8 /* LoginViewController.m */,
 			);
-			name = Authorisation;
+			path = Authorisation;
 			sourceTree = "<group>";
 		};
 		508391C51C98667D003514EF = {
@@ -327,10 +327,10 @@
 		508391D01C98667E003514EF /* MailByInVision */ = {
 			isa = PBXGroup;
 			children = (
-				500C97D91CA8911E0021FDAC /* Utility */,
 				50AFC4771C9ABCFE00434DCC /* Appearance */,
 				50AFC47B1C9ABDC800434DCC /* Categories */,
 				508391F31C988146003514EF /* Service */,
+				500C97D91CA8911E0021FDAC /* Utility */,
 				508391F01C98812E003514EF /* Model */,
 				508391F21C98813A003514EF /* View */,
 				508391F11C988132003514EF /* Controller */,
@@ -364,9 +364,9 @@
 		508391F11C988132003514EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				50596E0B1CA97D4A00DD69B8 /* Authorisation */,
 				50AFC4911C9AE6A400434DCC /* Container */,
 				500C97A61CA5D2960021FDAC /* Date Source & Provider */,
-				50596E0B1CA97D4A00DD69B8 /* Authorisation */,
 				50AFC48F1C9AE66D00434DCC /* Inbox */,
 				50AFC48E1C9AE66800434DCC /* Menu */,
 			);
@@ -379,14 +379,14 @@
 				50AFC4801C9AD41F00434DCC /* Cell */,
 				50AFC49D1C9B242F00434DCC /* Header */,
 				500C97B41CA5EAB30021FDAC /* ConfigurableCell.h */,
-				50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */,
-				50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */,
-				500C97D01CA863D60021FDAC /* SeparatorLine.h */,
-				500C97D11CA863D60021FDAC /* SeparatorLine.m */,
-				50596DFC1CA96E2500DD69B8 /* SearchTextField.h */,
-				50596DFD1CA96E2500DD69B8 /* SearchTextField.m */,
 				50596E111CA9882700DD69B8 /* LoginTextField.h */,
 				50596E121CA9882700DD69B8 /* LoginTextField.m */,
+				50596DFC1CA96E2500DD69B8 /* SearchTextField.h */,
+				50596DFD1CA96E2500DD69B8 /* SearchTextField.m */,
+				500C97D01CA863D60021FDAC /* SeparatorLine.h */,
+				500C97D11CA863D60021FDAC /* SeparatorLine.m */,
+				50AFC4BF1C9D51AB00434DCC /* WindowWithStatusBar.h */,
+				50AFC4C01C9D51AB00434DCC /* WindowWithStatusBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,13 +395,12 @@
 			isa = PBXGroup;
 			children = (
 				50596DFF1CA975A900DD69B8 /* Network Service */,
-				50596E011CA975D000DD69B8 /* ScreenTransitionService.h */,
-				50596E021CA975D000DD69B8 /* ScreenTransitionService.m */,
 				50596E081CA97C6900DD69B8 /* DemoUserService.h */,
 				50596E091CA97C6900DD69B8 /* DemoUserService.m */,
+				50596E011CA975D000DD69B8 /* ScreenTransitionService.h */,
+				50596E021CA975D000DD69B8 /* ScreenTransitionService.m */,
 			);
-			name = Service;
-			path = "Network Service";
+			path = Service;
 			sourceTree = "<group>";
 		};
 		508391F41C988157003514EF /* Resources */ = {
@@ -418,11 +417,11 @@
 			children = (
 				508391E01C98667E003514EF /* Inbox.storyboard */,
 				508391E51C98667E003514EF /* LaunchScreen.storyboard */,
+				50596E0F1CA9808700DD69B8 /* Login.storyboard */,
 				5083920D1C99A214003514EF /* Main.storyboard */,
 				50AFC4751C9AB2FA00434DCC /* Main_iPad.storyboard */,
 				508392051C998F02003514EF /* Menu.storyboard */,
 				50AFC4BA1C9D460D00434DCC /* Other.storyboard */,
-				50596E0F1CA9808700DD69B8 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -526,10 +525,14 @@
 				500C97BC1CA82DFB0021FDAC /* NSDate+Utils.m */,
 				504DB84B1CA06C0E00A76D61 /* NSDictionary+Parsing.h */,
 				504DB84C1CA06C0E00A76D61 /* NSDictionary+Parsing.m */,
+				500C97E21CA928910021FDAC /* NSIndexPath+Equality.h */,
+				500C97E31CA928910021FDAC /* NSIndexPath+Equality.m */,
 				504DB84E1CA0812A00A76D61 /* NSManagedObject+CustomInit.h */,
 				504DB84F1CA0812A00A76D61 /* NSManagedObject+CustomInit.m */,
 				50938D081CA3EA10009F6F51 /* NSManagedObject+SafeMapping.h */,
 				50938D091CA3EA10009F6F51 /* NSManagedObject+SafeMapping.m */,
+				500C97DF1CA891BC0021FDAC /* NSString+Crypto.h */,
+				500C97E01CA891BC0021FDAC /* NSString+Crypto.m */,
 				50938D051CA3D65D009F6F51 /* NSString+Emptiness.h */,
 				50938D061CA3D65D009F6F51 /* NSString+Emptiness.m */,
 				50AFC47C1C9ABDDB00434DCC /* UIColor+Hex.h */,
@@ -544,10 +547,6 @@
 				50AFC4A81C9B279D00434DCC /* UITableViewHeaderFooterView+ReuseIdentifier.m */,
 				504DB8521CA088B400A76D61 /* UIViewController+CoreDataStack.h */,
 				504DB8531CA088B400A76D61 /* UIViewController+CoreDataStack.m */,
-				500C97DF1CA891BC0021FDAC /* NSString+Crypto.h */,
-				500C97E01CA891BC0021FDAC /* NSString+Crypto.m */,
-				500C97E21CA928910021FDAC /* NSIndexPath+Equality.h */,
-				500C97E31CA928910021FDAC /* NSIndexPath+Equality.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -589,10 +588,10 @@
 				500C97B11CA5E29E0021FDAC /* InboxDataSource.m */,
 				508391FF1C998D80003514EF /* InboxViewController.h */,
 				508392001C998D80003514EF /* InboxViewController.m */,
-				500C97BE1CA858040021FDAC /* MessageDetailViewController.h */,
-				500C97BF1CA858040021FDAC /* MessageDetailViewController.m */,
 				500C97D61CA880EE0021FDAC /* MessageDetailDataSource.h */,
 				500C97D71CA880EE0021FDAC /* MessageDetailDataSource.m */,
+				500C97BE1CA858040021FDAC /* MessageDetailViewController.h */,
+				500C97BF1CA858040021FDAC /* MessageDetailViewController.m */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
