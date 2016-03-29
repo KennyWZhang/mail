@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="65C-bn-3cp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-aW-vTC">
+                                <rect key="frame" x="248" y="248" width="105" height="104"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXB-pP-Yd8">
+                                <rect key="frame" x="240" y="364" width="33" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by InVision" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r9-Ac-KYh">
+                                <rect key="frame" x="278" y="365" width="83" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hnB-aW-vTC" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="G9S-cl-mGZ"/>
+                            <constraint firstItem="6r9-Ac-KYh" firstAttribute="leading" secondItem="LXB-pP-Yd8" secondAttribute="trailing" constant="5" id="Hr0-bQ-h1J"/>
+                            <constraint firstItem="65C-bn-3cp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SbF-Ip-Sl2"/>
+                            <constraint firstItem="6r9-Ac-KYh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="19.5" id="ZaU-MG-Bse"/>
+                            <constraint firstItem="6r9-Ac-KYh" firstAttribute="top" secondItem="hnB-aW-vTC" secondAttribute="bottom" constant="13" id="fRH-jg-0OZ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="65C-bn-3cp" secondAttribute="bottom" id="i2Q-5E-Buc"/>
+                            <constraint firstItem="LXB-pP-Yd8" firstAttribute="centerY" secondItem="6r9-Ac-KYh" secondAttribute="centerY" id="lg0-6z-izj"/>
+                            <constraint firstItem="65C-bn-3cp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nhQ-RK-Zgw"/>
+                            <constraint firstAttribute="trailing" secondItem="65C-bn-3cp" secondAttribute="trailing" id="npa-qp-E4l"/>
+                            <constraint firstItem="hnB-aW-vTC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="saU-aw-xhD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +56,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="105" height="104"/>
+        <image name="logo-gradient" width="320" height="320"/>
+    </resources>
 </document>
