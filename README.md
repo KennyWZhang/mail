@@ -2,6 +2,8 @@
 
 This is a demo iOS application developed as part of an interview process to InVision.
 
+Please use `MailByInVision.xcworkspace` to open the project.
+
 Hosted JSON with a list of messages - https://www.dropbox.com/s/hma5zdh4y4i8635/messages.json?dl=1
 
 The app demonstrates a part of an email application containing four screens - a *Login*, *Inbox* and *Message* detail screens with a *Menu* screen providing base navigation within the app. *Inbox* screen contains list of messages which can represent either a single message or part of an email thread. The *Detail* screen shows more details about a message or a thread.
