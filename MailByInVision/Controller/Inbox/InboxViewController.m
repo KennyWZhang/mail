@@ -117,6 +117,7 @@
 - (void)dataProviderDidUpdateWithUpdates:(NSArray<DataProviderUpdate *> *)updates {
     [self.activityIndicator stopAnimating];
     self.tableView.hidden = NO;
+    self.searchContainerView.hidden = NO;
     
     [self.dataSource processUpdates:updates];
 }
