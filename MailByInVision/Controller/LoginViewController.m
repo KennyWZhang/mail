@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "DemoUserService.h"
+#import "NSString+Emptiness.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -47,8 +48,10 @@
 }
 
 - (void)login {
-    [DemoUserService saveUserWithEmail:self.emailTextField.text];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DidAuthoriseNotification object:nil];
+    if ([self.emailTextField.text notEmpty] && [self.passwordTextField.text notEmpty]) {
+        [DemoUserService saveUserWithEmail:self.emailTextField.text];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DidAuthoriseNotification object:nil];
+    }
 }
 
 - (void)hideKeyboard:(UITapGestureRecognizer *)recognizer {

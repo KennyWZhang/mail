@@ -46,7 +46,7 @@
     [self customizeUI];
     
     [MessageService fetchAllMessagesWithCoreDataStack:self.coreDataStack requestResult:^(NSArray *messages, NSError *error) {
-        NSLog(@"messages %@", messages);
+        // Do any aditional logic here after messages are received
     }];
 }
 
