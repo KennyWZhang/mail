@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *expandedBodyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *receivedAtLabel;
 @property (weak, nonatomic) IBOutlet UIButton *expandedReplyButton;
+@property (weak, nonatomic) IBOutlet UIButton *displayMoreButton;
 
 @property (nonatomic, getter = isExpanded) BOOL expanded;
 

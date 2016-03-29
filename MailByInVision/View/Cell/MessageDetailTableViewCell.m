@@ -87,6 +87,8 @@
         }];
     }
     
+    self.displayMoreButton.hidden = !message.lastMessage.boolValue;
+    
     NSDate *receivedAtDate = [NSDate dateWithTimeIntervalSince1970:message.receivedAt.doubleValue];
     if (receivedAtDate) {
         self.expandedReceivedAtLabel.text = [receivedAtDate wordsExpression];

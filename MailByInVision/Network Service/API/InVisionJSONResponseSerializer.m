@@ -13,14 +13,15 @@
 #pragma mark - AFURLResponseSerialization
 
 - (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error {
-    id responseObject = [super responseObjectForResponse:response data:data error:error];
+    NSError *errorFromSuperclass = nil;
+    id responseObject = [super responseObjectForResponse:response data:data error:&errorFromSuperclass];
     
     // Global handling of network errors
-    if (*error) {
+    if (errorFromSuperclass) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSString *message = @"Communication with server failed.";
             
-            switch ((*error).code) {
+            switch (errorFromSuperclass.code) {
                 case NSURLErrorTimedOut:
                     message = @"Connection timed out.";
                     break;
@@ -31,6 +32,8 @@
                 default:
                     break;
             }
+            
+            *error = errorFromSuperclass;
             
             [[[UIAlertView alloc] initWithTitle:@"Communcation Error" message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil] show];
         });

@@ -12,7 +12,6 @@
 @interface LoginViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
@@ -30,32 +29,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowOrHide:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowOrHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
-}
-
--(void)viewDidLayoutSubviews {
-    CGRect scrollViewBounds = self.scrollView.bounds;
-    CGRect containerViewBounds = self.contentView.bounds;
-    
-    UIEdgeInsets scrollViewInsets = UIEdgeInsetsZero;
-    scrollViewInsets.top = CGRectGetHeight(scrollViewBounds) / 2;
-    scrollViewInsets.top -= CGRectGetHeight(containerViewBounds) / 2;
-    
-    scrollViewInsets.bottom = CGRectGetHeight(scrollViewBounds) / 2;
-    scrollViewInsets.bottom -= CGRectGetHeight(scrollViewBounds) / 2;
-    scrollViewInsets.bottom += 1;
-    
-    self.scrollView.contentInset = scrollViewInsets;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 #pragma mark - Actions
@@ -73,37 +55,23 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark - Notifications
+#pragma mark - Notification
 
-- (void)keyboardDidShow:(NSNotification *)notification {
-    NSDictionary* info = notification.userInfo;
-    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    CGRect keyboardFrame = [self.view convertRect:[[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue] fromView:self.view.window];
-    CGRect scrollViewFrame = self.scrollView.frame;
-    CGFloat topInset = self.scrollView.contentInset.top;
+- (void)keyboardWillShowOrHide:(NSNotification *)notification {
+    CGRect endValue = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat durationValue = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    NSInteger curveValue = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
     
-    // Find out if keyboard does not overlap the scroll view and if so set correct insets to have ability to still scroll in whole scroll view
-    if (CGRectIntersectsRect(keyboardFrame, scrollViewFrame)) {
-        CGRect intersection = CGRectIntersection(keyboardFrame, scrollViewFrame);
-        UIEdgeInsets contentInsets = UIEdgeInsetsMake(topInset, 0, intersection.size.height, 0.0);
-        [UIView animateWithDuration:animationDuration animations:^{
-            self.scrollView.contentInset = contentInsets;
-            self.scrollView.scrollIndicatorInsets = contentInsets;
-        }];
-    }
-}
-
-- (void)keyboardDidHide:(NSNotification *)notification {
-    NSDictionary* info = notification.userInfo;
-    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect endRect = [self.view convertRect:endValue fromView:self.view.window];
     
-    CGFloat topInset = self.scrollView.contentInset.top;
+    CGFloat keyboardOverlap = CGRectGetMaxY(self.view.frame) - CGRectGetMinY(endRect);
     
-    UIEdgeInsets insets = UIEdgeInsetsMake(topInset, 0, 0, 0);
-    [UIView animateWithDuration:animationDuration animations:^{
-        self.scrollView.contentInset = insets;
-        self.scrollView.scrollIndicatorInsets = insets;
-    }];
+    self.scrollView.contentInset = UIEdgeInsetsMake(self.scrollView.contentInset.top, self.scrollView.contentInset.left, keyboardOverlap, self.scrollView.contentInset.right);
+    self.scrollView.scrollIndicatorInsets = self.scrollView.contentInset;
+    
+    [UIView animateWithDuration:durationValue delay:0 options:curveValue animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
 }
 
 #pragma mark - Text Field Delegate

@@ -55,7 +55,7 @@
     
     // Data provider & data source
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[Message entityName]];
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"receivedAt" ascending:false]];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"receivedAt" ascending:true]];
     
     NSPredicate *predicate = nil;
     if (self.message.threadID) {
@@ -89,7 +89,9 @@
         [self.attachmentFooterView.attachmentFilenameButton setTitle:self.message.attachmentName forState:UIControlStateNormal];
     }
     else {
-        self.tableView.tableFooterView = nil;
+        // Hides empty cells
+        UIView *footerView = [[UIView alloc] initWithFrame:CGRectZero];
+        self.tableView.tableFooterView = footerView;
     }
 }
 

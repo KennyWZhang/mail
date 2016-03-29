@@ -14,8 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.replyButton.titleLabel.textColor = [UIColor applicationLightGrayTextColor];
-    self.forwardButton.titleLabel.textColor = [UIColor applicationLightGrayTextColor];
+    [self.replyButton setTitleColor:[UIColor applicationLightGrayTextColor] forState:UIControlStateNormal];
+    [self.forwardButton setTitleColor:[UIColor applicationLightGrayTextColor] forState:UIControlStateNormal];
     self.leftContainerView.backgroundColor = [UIColor applicationLightGrayBackgroundColor];
     self.rightContainerView.backgroundColor = [UIColor applicationLightGrayBackgroundColor];
 }

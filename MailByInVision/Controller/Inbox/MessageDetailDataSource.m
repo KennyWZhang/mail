@@ -35,7 +35,7 @@
         self.dataProvider = dataProvider;
         self.delegate = delegate;
         
-        self.expandedRowIndexPaths = [NSMutableArray array];
+        self.expandedRowIndexPaths = [NSMutableSet set];
         
         tableView.dataSource = self;
         tableView.delegate = self;

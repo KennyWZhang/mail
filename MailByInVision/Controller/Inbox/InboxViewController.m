@@ -85,9 +85,13 @@
 - (void)setupTableView {
     // UI customisation
     self.tableView.separatorColor = [UIColor applicationSeparatorLineColor];
-    self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, -15, 0, 0);
     self.tableView.preservesSuperviewLayoutMargins = NO;
     self.tableView.layoutMargins = UIEdgeInsetsZero;
+    
+    // Hides empty cells
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.tableFooterView = footerView;
     
     // Data provider & data source
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[Message entityName]];
@@ -125,7 +129,10 @@
 - (void)didSelectRowWithObject:(NSManagedObject *)object {
     MessageDetailViewController *controller = [[UIStoryboard storyboardWithName:@"Inbox" bundle:nil] instantiateViewControllerWithIdentifier:@"MessageDetailViewController"];
     
-    controller.message = (Message *)object;
+    Message *selectedMessage = (Message *)object;
+    selectedMessage.read = @(YES);
+    
+    controller.message = selectedMessage;
     controller.coreDataStack = self.coreDataStack;
     
     [self.navigationController pushViewController:controller animated:true];
