@@ -46,7 +46,7 @@
     [self customizeUI];
     
     [MessageService fetchAllMessagesWithCoreDataStack:self.coreDataStack requestResult:^(NSArray *messages, NSError *error) {
-        // Do any aditional logic here after messages are received
+        [self showContent];
     }];
 }
 
@@ -110,6 +110,12 @@
     self.dataSource = [[InboxDataSource alloc] initWithTableView:self.tableView dataProvider:dataProvider delegate:self];
 }
 
+- (void)showContent {
+    [self.activityIndicator stopAnimating];
+    self.tableView.hidden = NO;
+    self.searchContainerView.hidden = NO;
+}
+
 #pragma mark - Data Source Delegate
 
 - (NSString *)cellIdentifierForObject:(NSManagedObject *)object {
@@ -119,9 +125,7 @@
 #pragma mark - Data Provider Delegate
 
 - (void)dataProviderDidUpdateWithUpdates:(NSArray<DataProviderUpdate *> *)updates {
-    [self.activityIndicator stopAnimating];
-    self.tableView.hidden = NO;
-    self.searchContainerView.hidden = NO;
+    [self showContent];
     
     [self.dataSource processUpdates:updates];
 }
